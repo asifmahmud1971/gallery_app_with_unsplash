@@ -10,6 +10,15 @@ Unsplash-Gallery” --org com.dinnova.unsplash_gallery”
 <img height="60" src="https://tecmanic.com/envato/android-app.png">
 </a>
 
+App features
+
+   - Photo Gallery App with infinite scroll pagination
+   - Unsplash API for fetching photos.
+   - User has an infinite scroll on the gallery screen
+   - Cache Images and API responses
+   - Allow saving photos
+
+
 This project contains 3 flavors:
 
 - development
