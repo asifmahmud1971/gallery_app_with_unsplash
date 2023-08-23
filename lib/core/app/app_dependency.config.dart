@@ -9,35 +9,24 @@ import 'package:dio/dio.dart' as _i4;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i6;
-import 'package:terminator/core/app/app_dependency.dart' as _i21;
-import 'package:terminator/core/app/app_preference.dart' as _i3;
-import 'package:terminator/data/network/api_client.dart' as _i8;
-import 'package:terminator/features/screens/auth/cubit/auth_cubit.dart' as _i17;
-import 'package:terminator/features/screens/auth/repository/auth_repo.dart'
-    as _i10;
-import 'package:terminator/features/screens/auth/repository/auth_repo_imp.dart'
-    as _i9;
-import 'package:terminator/features/screens/dashboard/cubit/dashboard_cubit.dart'
-    as _i18;
-import 'package:terminator/features/screens/dashboard/repository/dashboard_repo.dart'
-    as _i12;
-import 'package:terminator/features/screens/dashboard/repository/dashboard_repo_imp.dart'
-    as _i11;
-import 'package:terminator/features/screens/no_internet/cubit/internet_cubit.dart'
-    as _i5;
-import 'package:terminator/features/screens/termine/cubit/termin_cubit.dart'
-    as _i19;
-import 'package:terminator/features/screens/termine/repository/termin_repo.dart'
-    as _i16;
-import 'package:terminator/features/screens/termine/repository/termin_repo_imp.dart'
-    as _i15;
-import 'package:terminator/features/screens/termine_details/cubit/termin_details_cubit.dart'
-    as _i20;
-import 'package:terminator/features/screens/termine_details/repository/termin_details_repo.dart'
-    as _i14;
-import 'package:terminator/features/screens/termine_details/repository/termin_details_repo_imp.dart'
+import 'package:unsplash_gallery/core/app/app_dependency.dart' as _i15;
+import 'package:unsplash_gallery/core/app/app_preference.dart' as _i3;
+import 'package:unsplash_gallery/data/network/api_client.dart' as _i8;
+import 'package:unsplash_gallery/features/screens/auth/cubit/auth_cubit.dart'
     as _i13;
-import 'package:terminator/features/screens/theme/cubit/theme_cubit.dart'
+import 'package:unsplash_gallery/features/screens/auth/repository/auth_repo.dart'
+    as _i10;
+import 'package:unsplash_gallery/features/screens/auth/repository/auth_repo_imp.dart'
+    as _i9;
+import 'package:unsplash_gallery/features/screens/gallery/cubit/gallery_cubit.dart'
+    as _i14;
+import 'package:unsplash_gallery/features/screens/gallery/repository/gallery_repo.dart'
+    as _i12;
+import 'package:unsplash_gallery/features/screens/gallery/repository/gallery_repo_imp.dart'
+    as _i11;
+import 'package:unsplash_gallery/features/screens/no_internet/cubit/internet_cubit.dart'
+    as _i5;
+import 'package:unsplash_gallery/features/screens/theme/cubit/theme_cubit.dart'
     as _i7;
 
 // ignore_for_file: unnecessary_lambdas
@@ -65,24 +54,14 @@ Future<_i1.GetIt> $initGetIt(
   gh.factory<_i8.ApiClient>(() => _i8.ApiClient(gh<_i4.Dio>()));
   gh.factory<_i9.AuthRepositoryImp>(
       () => _i10.AuthRepository(apiClient: gh<_i8.ApiClient>()));
-  gh.factory<_i11.DashboardRepositoryImp>(
-      () => _i12.DashboardRepository(apiClient: gh<_i8.ApiClient>()));
-  gh.factory<_i13.TerminDetailsImp>(
-      () => _i14.TerminDetailsRepository(apiClient: gh<_i8.ApiClient>()));
-  gh.factory<_i15.TerminRepositoryImp>(
-      () => _i16.TerminRepository(apiClient: gh<_i8.ApiClient>()));
-  gh.factory<_i17.AuthCubit>(() => _i17.AuthCubit(gh<_i9.AuthRepositoryImp>()));
-  gh.factory<_i18.DashboardCubit>(() => _i18.DashboardCubit(
-        gh<_i11.DashboardRepositoryImp>(),
+  gh.factory<_i11.GalleryRepositoryImp>(
+      () => _i12.GalleryRepository(apiClient: gh<_i8.ApiClient>()));
+  gh.factory<_i13.AuthCubit>(() => _i13.AuthCubit(gh<_i9.AuthRepositoryImp>()));
+  gh.factory<_i14.GalleryCubit>(() => _i14.GalleryCubit(
+        gh<_i11.GalleryRepositoryImp>(),
         gh<_i3.AppPreferences>(),
       ));
-  gh.factory<_i19.TerminCubit>(() => _i19.TerminCubit(
-        gh<_i15.TerminRepositoryImp>(),
-        gh<_i3.AppPreferences>(),
-      ));
-  gh.factory<_i20.TerminDetailsCubit>(
-      () => _i20.TerminDetailsCubit(gh<_i13.TerminDetailsImp>()));
   return getIt;
 }
 
-class _$AppModule extends _i21.AppModule {}
+class _$AppModule extends _i15.AppModule {}

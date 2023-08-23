@@ -2,9 +2,9 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:terminator/core/app/app_dependency.dart';
-import 'package:terminator/core/app/app_preference.dart';
-import 'package:terminator/data/network/api_urls.dart';
+import 'package:unsplash_gallery/core/app/app_dependency.dart';
+import 'package:unsplash_gallery/core/app/app_preference.dart';
+import 'package:unsplash_gallery/data/network/api_urls.dart';
 
 const String applicationJson = "application/json";
 const String contentType = "Content-Type";

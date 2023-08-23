@@ -10,7 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart'
     hide RefreshIndicatorState, RefreshIndicator;
-import 'package:terminator/features/components/custom_refresh/src/internals/refresh_localizations.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/internals/refresh_localizations.dart';
 
 import '../internals/indicator_wrap.dart';
 import '../smart_refresher.dart';

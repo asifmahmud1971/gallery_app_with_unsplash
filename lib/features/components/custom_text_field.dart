@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_images.dart';
-import 'package:terminator/core/constants/app_size.dart';
-import 'package:terminator/features/components/custom_svg.dart';
-import 'package:terminator/features/components/my_tooltip.dart';
-import 'package:terminator/features/screens/auth/cubit/auth_cubit.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_images.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
+import 'package:unsplash_gallery/features/components/custom_svg.dart';
+import 'package:unsplash_gallery/features/components/my_tooltip.dart';
+import 'package:unsplash_gallery/features/screens/auth/cubit/auth_cubit.dart';
 
 class CustomTextField extends StatefulWidget {
   final String? hint;

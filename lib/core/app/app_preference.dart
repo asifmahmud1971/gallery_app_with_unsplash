@@ -4,9 +4,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/components/my_context.dart';
-import 'package:terminator/features/screens/auth/models/login_response.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
+import 'package:unsplash_gallery/features/screens/auth/models/login_response.dart';
 
 import 'app_dependency.dart';
 

@@ -4,9 +4,9 @@ import 'dart:developer';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:terminator/core/constants/app_size.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/screens/auth/cubit/auth_cubit.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/screens/auth/cubit/auth_cubit.dart';
 
 class ResendWidget extends StatefulWidget {
   final String email;

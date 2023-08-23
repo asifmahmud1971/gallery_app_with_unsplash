@@ -50,7 +50,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.dinnova.terminator"
+        applicationId "com.dinnova.unsplash_gallery"
         minSdkVersion 20
         multiDexEnabled true
         targetSdkVersion 33
@@ -81,17 +81,17 @@ android {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Termin-ator"]
+            manifestPlaceholders = [appName: "Unsplash-Gallery"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Termin-ator"]
+            manifestPlaceholders = [appName: "[STG] Unsplash-Gallery"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Termin-ator"]
+            manifestPlaceholders = [appName: "[DEV] Unsplash-Gallery"]
         }
     }
 

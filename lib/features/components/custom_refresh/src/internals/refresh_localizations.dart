@@ -266,7 +266,7 @@ class FrRefreshString implements RefreshString {
   String? noMoreText = "Aucune autre donnée";
 
   @override
-  String? refreshCompleteText = "Rafraîchissement terminé";
+  String? refreshCompleteText = "Rafraîchissement galleryé";
 
   @override
   String? refreshFailedText = "Rafraîchissement échoué";

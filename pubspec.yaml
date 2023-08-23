@@ -1,5 +1,5 @@
-name: terminator
-description: Termin-ator ” --org com.dinnova.terminator”
+name: unsplash_gallery
+description: Unsplash-Gallery ” --org com.dinnova.unsplash_gallery”
 version: 1.0.1+1
 publish_to: none
 

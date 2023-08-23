@@ -5,13 +5,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:terminator/core/app/app_dependency.dart';
-import 'package:terminator/core/app/app_preference.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/components/custom_progress_loader.dart';
-import 'package:terminator/features/components/my_context.dart';
-import 'package:terminator/features/router/routes.dart';
-import 'package:terminator/features/screens/auth/repository/auth_repo_imp.dart';
+import 'package:unsplash_gallery/core/app/app_dependency.dart';
+import 'package:unsplash_gallery/core/app/app_preference.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/components/custom_progress_loader.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
+import 'package:unsplash_gallery/features/router/routes.dart';
+import 'package:unsplash_gallery/features/screens/auth/repository/auth_repo_imp.dart';
 
 import '../../../../core/constants/strings.dart';
 

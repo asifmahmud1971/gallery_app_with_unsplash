@@ -373,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = Termin-ator;
+				FLAVOR_APP_NAME = Unsplash-Gallery;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -381,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -511,7 +511,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = Termin-ator;
+				FLAVOR_APP_NAME = Unsplash-Gallery;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,7 +519,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -541,7 +541,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = Termin-ator;
+				FLAVOR_APP_NAME = Unsplash-Gallery;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -549,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -626,7 +626,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[DEV] Termin-ator";
+				FLAVOR_APP_NAME = "[DEV] Unsplash-Gallery";
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -634,7 +634,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios.dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -709,7 +709,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[DEV] Termin-ator";
+				FLAVOR_APP_NAME = "[DEV] Unsplash-Gallery";
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -717,7 +717,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios.dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -789,7 +789,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[DEV] Termin-ator";
+				FLAVOR_APP_NAME = "[DEV] Unsplash-Gallery";
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -797,7 +797,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios.dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -874,7 +874,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[STG] Termin-ator";
+				FLAVOR_APP_NAME = "[STG] Unsplash-Gallery";
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -882,7 +882,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios.stg";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios.stg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -957,7 +957,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[STG] Termin-ator";
+				FLAVOR_APP_NAME = "[STG] Unsplash-Gallery";
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -965,7 +965,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios.stg";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios.stg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1037,7 +1037,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HLQ454SBHW;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[STG] Termin-ator";
+				FLAVOR_APP_NAME = "[STG] Unsplash-Gallery";
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1045,7 +1045,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.terminator-ios.stg";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dinnova.unsplash_gallery-ios.stg";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

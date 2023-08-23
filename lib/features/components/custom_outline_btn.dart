@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_size.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
 
 class CustomOutlineBtn extends StatelessWidget {
   final String title;

@@ -1,10 +1,10 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_images.dart';
-import 'package:terminator/features/components/custom_svg.dart';
-import 'package:terminator/features/components/my_context.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_images.dart';
+import 'package:unsplash_gallery/features/components/custom_svg.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
 
 void showCustomSnackBar({
   required BuildContext context,

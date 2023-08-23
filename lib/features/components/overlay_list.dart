@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/features/components/my_context.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
 
 void showOverlay(BuildContext context, key) async {
   final overLay = Overlay.of(context);

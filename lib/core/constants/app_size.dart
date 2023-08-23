@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:terminator/features/components/custom_extensions.dart';
+import 'package:unsplash_gallery/features/components/custom_extensions.dart';
 
 class AppTextSize {
   static double s0 = 0.0.sp;

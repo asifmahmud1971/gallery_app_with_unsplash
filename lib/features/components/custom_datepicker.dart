@@ -8,7 +8,7 @@
 // import 'package:flutter_datetime_picker/src/date_model.dart';
 // import 'package:flutter_datetime_picker/src/datetime_picker_theme.dart';
 // import 'package:flutter_datetime_picker/src/i18n_model.dart';
-// import 'package:terminator/core/constants/app_strings.dart';
+// import 'package:unsplash_gallery/core/constants/app_strings.dart';
 //
 // export 'package:flutter_datetime_picker/src/date_model.dart';
 // export 'package:flutter_datetime_picker/src/datetime_picker_theme.dart';

@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:terminator/data/network/api_failure.dart';
+import 'package:unsplash_gallery/data/network/api_failure.dart';
 
 import '../models/login_response.dart';
 

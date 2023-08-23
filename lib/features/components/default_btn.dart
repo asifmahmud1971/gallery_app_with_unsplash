@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:terminator/features/components/custom_svg.dart';
+import 'package:unsplash_gallery/features/components/custom_svg.dart';
 
 import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_size.dart';

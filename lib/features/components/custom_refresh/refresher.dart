@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:terminator/features/components/custom_refresh/src/indicator/custom_indicator.dart';
-import 'package:terminator/features/components/custom_refresh/src/indicator/material_indicator.dart';
-import 'package:terminator/features/components/custom_refresh/src/smart_refresher.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/indicator/custom_indicator.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/indicator/material_indicator.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/smart_refresher.dart';
 
 import '../../../core/constants/app_colors.dart';
 

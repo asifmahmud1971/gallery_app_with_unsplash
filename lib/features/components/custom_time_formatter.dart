@@ -4,11 +4,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
-import 'package:terminator/features/components/custom_progress_loader.dart';
-import 'package:terminator/features/components/my_context.dart';
-import 'package:terminator/features/screens/dashboard/cubit/dashboard_cubit.dart';
-import 'package:terminator/features/screens/dashboard/widget/filter_widget.dart';
-import 'package:terminator/features/screens/termine/cubit/termin_cubit.dart';
+import 'package:unsplash_gallery/features/components/custom_progress_loader.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
+import 'package:unsplash_gallery/features/screens/gallery/cubit/gallery_cubit.dart';
 
 class CustomTimeFormatter {
   static String dateRangeFormat(DateTime? dateTime) {
@@ -21,30 +19,6 @@ class CustomTimeFormatter {
     String formattedTime = "${timeRange.hour}:${timeRange.minute}";
     return formattedTime;
     // something like 13:30
-  }
-
-  static void dateTimeRange(DateRangePickerSelectionChangedArgs args) {
-    if (args.value is PickerDateRange) {
-      GetContext.context.read<DashboardCubit>().pickerStartEnd(
-          start: args.value.startDate,
-          end: args.value.endDate ?? args.value.startDate);
-      log("start date-----------> ${args.value.startDate}");
-      GetContext.context.read<DashboardCubit>().dateTimeRange = DateTimeRange(
-          start: args.value.startDate,
-          end: args.value.endDate ?? args.value.startDate);
-    }
-  }
-
-  static void dateTimeRangeFilter(DateRangePickerSelectionChangedArgs args) {
-    if (args.value is PickerDateRange) {
-      GetContext.context.read<TerminCubit>().setFilter(TerminFilterType.date,
-          dateTimeRange: DateTimeRange(
-              start: args.value.startDate,
-              end: args.value.endDate ?? args.value.startDate));
-      GetContext.context.read<TerminCubit>().dateRangeGlobal = DateTimeRange(
-          start: args.value.startDate,
-          end: args.value.endDate ?? args.value.startDate);
-    }
   }
 
   static String dateFormat(DateTime? dateTime) {
@@ -105,26 +79,6 @@ class CustomTimeFormatter {
   static String utcToLocalFilterDateFormat(DateTime? dateTime) {
     return DateFormat('dd.MM.yyyy   HH:mm')
         .format((dateTime ?? DateTime.now()).toLocal());
-  }
-
-  static DateTimeRange filterDateRange(FilterOptionType filterOption) {
-    DateTime today = DateTime.now();
-    DateTime yesterday = today.subtract(Duration(days: 1));
-    DateTime lastWeek = today.subtract(Duration(days: 7));
-    DateTime lastMonth = today.subtract(Duration(days: 30));
-
-    switch (filterOption) {
-      case FilterOptionType.today:
-        return DateTimeRange(start: today, end: today);
-      case FilterOptionType.yesterday:
-        return DateTimeRange(start: yesterday, end: yesterday);
-      case FilterOptionType.last_week:
-        return DateTimeRange(start: lastWeek, end: today);
-      case FilterOptionType.last_month:
-        return DateTimeRange(start: lastMonth, end: today);
-      case FilterOptionType.custom:
-        return DateTimeRange(start: DateTime.now(), end: DateTime.now());
-    }
   }
 
   static String time(String dateTime) {

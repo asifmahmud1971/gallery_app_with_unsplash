@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:terminator/core/app/app_behavior.dart';
-import 'package:terminator/core/app/app_providers.dart';
-import 'package:terminator/features/components/my_context.dart';
-import 'package:terminator/features/screens/no_internet/cubit/internet_cubit.dart';
+import 'package:unsplash_gallery/core/app/app_behavior.dart';
+import 'package:unsplash_gallery/core/app/app_providers.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
+import 'package:unsplash_gallery/features/screens/no_internet/cubit/internet_cubit.dart';
 
 import '../../features/router/routes.dart';
 import '../../features/screens/theme/app_theme.dart';
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                     builder: EasyLoading.init(),
                     navigatorKey: GetContext.navigatorKey,
                     debugShowCheckedModeBanner: false,
-                    title: 'Termin-ator',
+                    title: 'Unsplash-Gallery',
                     theme: context.read<ThemeCubit>().darkTheme
                         ? AppTheme.darkTheme
                         : AppTheme.lightTheme,

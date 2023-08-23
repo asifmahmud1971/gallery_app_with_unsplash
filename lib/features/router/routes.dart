@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/screens/auth/view/forgot_page.dart';
-import 'package:terminator/features/screens/auth/view/forgot_success.dart';
-import 'package:terminator/features/screens/auth/view/login_page.dart';
-import 'package:terminator/features/screens/dashboard/view/dashboard_screen.dart';
-import 'package:terminator/features/screens/splash/view/splash_screen.dart';
-import 'package:terminator/features/screens/termine/view/termine_screen.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/screens/auth/view/forgot_page.dart';
+import 'package:unsplash_gallery/features/screens/auth/view/forgot_success.dart';
+import 'package:unsplash_gallery/features/screens/auth/view/login_page.dart';
+import 'package:unsplash_gallery/features/screens/gallery/view/gallery_screen.dart';
+import 'package:unsplash_gallery/features/screens/splash/view/splash_screen.dart';
 
 class Routes {
   static const String splash = "/";
@@ -13,7 +12,7 @@ class Routes {
   static const String forgot = "/forgot";
   static const String forgotSuccess = "/forgotSuccess";
   static const String dashboard = "/dashboard";
-  static const String termineScreen = "/termineScreen";
+  static const String galleryScreen = "/galleryScreen";
 }
 
 class RouteGenerator {
@@ -35,13 +34,9 @@ class RouteGenerator {
         return MaterialPageRoute(
             builder: (_) => ForgotSuccess(), settings: routeSettings);
 
-      case Routes.dashboard:
+      case Routes.galleryScreen:
         return MaterialPageRoute(
-            builder: (_) => const DashboardScreen(), settings: routeSettings);
-
-      case Routes.termineScreen:
-        return MaterialPageRoute(
-            builder: (_) => const TermineScreen(), settings: routeSettings);
+            builder: (_) => const GalleryScreen(), settings: routeSettings);
 
       default:
         return unDefinedRoute();

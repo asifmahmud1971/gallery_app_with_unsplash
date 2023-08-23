@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:terminator/core/constants/app_size.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
 
 import '../../core/constants/app_colors.dart';
 

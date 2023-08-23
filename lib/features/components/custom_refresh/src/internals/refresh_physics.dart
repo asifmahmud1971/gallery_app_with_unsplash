@@ -9,8 +9,8 @@ import 'dart:math' as math;
 // ignore_for_file: INVALID_USE_OF_VISIBLE_FOR_TESTING_MEMBER
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:terminator/features/components/custom_refresh/src/internals/slivers.dart';
-import 'package:terminator/features/components/custom_refresh/src/smart_refresher.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/internals/slivers.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/smart_refresher.dart';
 
 /// a scrollPhysics for config refresh scroll effect,enable viewport out of edge whatever physics it is
 /// in [ClampingScrollPhysics], it doesn't allow to flip out of edge,but in RefreshPhysics,it will allow to do that,

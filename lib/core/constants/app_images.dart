@@ -1,4 +1,4 @@
-import 'package:terminator/core/constants/strings.dart';
+import 'package:unsplash_gallery/core/constants/strings.dart';
 
 class AppImages {
   /// Image start///
@@ -63,7 +63,7 @@ class AppImages {
   // new icons start
   static const String imagesLoginBg = kImageDir + 'login_bg.png';
   static const String iconsTitleLogo = kIConDir + 'title_logo.png';
-  static const String terAnim = kImageDir + 'termine_anim.gif';
+  static const String terAnim = kImageDir + 'gallery_anim.gif';
   static const String homeSvg = kIConDir + 'home.svg';
   static const String activeDoc = kIConDir + 'active_doc.svg';
   static const String exit = kIConDir + 'exit.svg';

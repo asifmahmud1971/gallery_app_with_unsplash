@@ -63,8 +63,7 @@ class AppStrings {
 
   //dashboard
   static const String home = "home";
-  static const String termine = "termine";
-  static const String termin = "termin";
+  static const String gallery = "Unsplash Gallery";
   static const String terminDetails = "terminDetails";
   static const String myPerformance = "myPerformance";
   static const String history = "history";

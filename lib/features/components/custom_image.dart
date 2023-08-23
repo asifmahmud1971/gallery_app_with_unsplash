@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_images.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_images.dart';
 
 import 'custom_svg.dart';
 

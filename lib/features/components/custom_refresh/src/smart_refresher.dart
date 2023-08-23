@@ -7,7 +7,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
-import 'package:terminator/features/components/custom_refresh/src/internals/slivers.dart';
+import 'package:unsplash_gallery/features/components/custom_refresh/src/internals/slivers.dart';
 
 import 'indicator/classic_indicator.dart';
 import 'indicator/material_indicator.dart';

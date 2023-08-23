@@ -1,13 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_images.dart';
-import 'package:terminator/core/constants/app_size.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/components/custom_svg.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_images.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/components/custom_svg.dart';
 
 enum EmptyType {
-  termine,
+  gallery,
 }
 
 class CustomEmptyBody extends StatelessWidget {
@@ -18,7 +18,7 @@ class CustomEmptyBody extends StatelessWidget {
 
   Widget getEmptyBody({EmptyType? type}) {
     switch (type) {
-      case EmptyType.termine:
+      case EmptyType.gallery:
         return CustomEmptyBody(
             icons: AppImages.activeDoc, text: AppStrings.noDataFound.tr());
 

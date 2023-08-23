@@ -2,11 +2,11 @@ import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:terminator/data/network/api_client.dart';
-import 'package:terminator/data/network/api_exception.dart';
-import 'package:terminator/data/network/api_failure.dart';
-import 'package:terminator/data/network/api_urls.dart';
-import 'package:terminator/features/screens/auth/models/login_response.dart';
+import 'package:unsplash_gallery/data/network/api_client.dart';
+import 'package:unsplash_gallery/data/network/api_exception.dart';
+import 'package:unsplash_gallery/data/network/api_failure.dart';
+import 'package:unsplash_gallery/data/network/api_urls.dart';
+import 'package:unsplash_gallery/features/screens/auth/models/login_response.dart';
 
 import 'auth_repo_imp.dart';
 

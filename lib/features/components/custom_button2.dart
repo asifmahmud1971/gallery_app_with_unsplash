@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_size.dart';
-import 'package:terminator/features/components/custom_svg.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
+import 'package:unsplash_gallery/features/components/custom_svg.dart';
 
 class CustomButton2 extends StatelessWidget {
   final String title;

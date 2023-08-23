@@ -1,6 +1,6 @@
-# Termin-ator
+# Unsplash-Gallery
 
-Termin-ator” --org com.dinnova.terminator”
+Unsplash-Gallery” --org com.dinnova.unsplash_gallery”
 
 ---
 

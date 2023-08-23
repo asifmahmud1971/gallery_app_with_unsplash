@@ -6,17 +6,17 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sms_autofill/sms_autofill.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_size.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/components/custom_progress_loader.dart';
-import 'package:terminator/features/components/custom_snackbar.dart';
-import 'package:terminator/features/components/default_btn.dart';
-import 'package:terminator/features/components/my_context.dart';
-import 'package:terminator/features/screens/auth/cubit/auth_cubit.dart';
-import 'package:terminator/features/screens/auth/view/reset_password_page.dart';
-import 'package:terminator/features/screens/auth/widget/auth_background.dart';
-import 'package:terminator/features/screens/auth/widget/resend_widget.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/components/custom_progress_loader.dart';
+import 'package:unsplash_gallery/features/components/custom_snackbar.dart';
+import 'package:unsplash_gallery/features/components/default_btn.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
+import 'package:unsplash_gallery/features/screens/auth/cubit/auth_cubit.dart';
+import 'package:unsplash_gallery/features/screens/auth/view/reset_password_page.dart';
+import 'package:unsplash_gallery/features/screens/auth/widget/auth_background.dart';
+import 'package:unsplash_gallery/features/screens/auth/widget/resend_widget.dart';
 
 class ForgotOtpPage extends StatefulWidget {
   final String? email;

@@ -3,15 +3,16 @@ import 'dart:async';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:terminator/core/app/app_dependency.dart';
-import 'package:terminator/core/app/app_preference.dart';
-import 'package:terminator/core/constants/app_colors.dart';
-import 'package:terminator/core/constants/app_images.dart';
-import 'package:terminator/core/constants/app_size.dart';
-import 'package:terminator/core/constants/app_strings.dart';
-import 'package:terminator/features/components/my_context.dart';
-import 'package:terminator/features/router/routes.dart';
-import 'package:terminator/features/screens/dashboard/view/termine_page.dart';
+import 'package:unsplash_gallery/core/app/app_dependency.dart';
+import 'package:unsplash_gallery/core/app/app_preference.dart';
+import 'package:unsplash_gallery/core/constants/app_colors.dart';
+import 'package:unsplash_gallery/core/constants/app_images.dart';
+import 'package:unsplash_gallery/core/constants/app_size.dart';
+import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/components/my_context.dart';
+import 'package:unsplash_gallery/features/router/routes.dart';
+
+import '../../gallery/view/gallery_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   final AppPreferences _appPreferences;
@@ -38,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
     } else {
       /*Navigator.pushNamedAndRemoveUntil(
           context, Routes.login, (route) => false);*/
-      GetContext.to(TerminePage());
+      GetContext.to(GalleryScreen());
     }
   }
 

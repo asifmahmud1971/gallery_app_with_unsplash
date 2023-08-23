@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:terminator/core/app/app_dependency.config.dart';
+import 'package:unsplash_gallery/core/app/app_dependency.config.dart';
 
 final instance = GetIt.instance;
 

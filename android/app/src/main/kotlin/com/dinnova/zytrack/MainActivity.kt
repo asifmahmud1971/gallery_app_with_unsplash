@@ -1,4 +1,4 @@
-package com.dinnova.terminator
+package com.dinnova.unsplash_gallery
 
 import io.flutter.embedding.android.FlutterActivity
 

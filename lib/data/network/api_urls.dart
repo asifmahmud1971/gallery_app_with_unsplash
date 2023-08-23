@@ -1,13 +1,10 @@
-
 import '../../core/app/app_flavor.dart';
 
 class ApiUrls {
   static String baseUrl = getServerUrl();
-  static const String liveUrl =
-      'https://trqa.dinnova.ch/api/app/'; //live server
+  static const String liveUrl = 'https://api.unsplash.com/'; //live server
   static const String devUrl = 'https://api.unsplash.com/'; // dev server
-  static const String testUrl =
-      'https://trqa.dinnova.ch/api/app/'; // test server
+  static const String testUrl = 'https://api.unsplash.com/'; // test server
 
   // get current flavor url
   static String getServerUrl() {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:terminator/core/app_bloc_observer.dart';
+import 'package:unsplash_gallery/core/app_bloc_observer.dart';
 
 import 'core/app/app.dart';
 import 'core/app/app_dependency.dart';
