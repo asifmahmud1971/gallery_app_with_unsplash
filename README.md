@@ -46,8 +46,6 @@ $ flutter build appbundle --flavor production --target lib/main_production.dart
 
 ```
 
-_\*Flutter Starter works on iOS, Android._
-
 
 
 
