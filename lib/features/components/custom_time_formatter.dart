@@ -2,11 +2,9 @@ import 'dart:developer';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import 'package:unsplash_gallery/features/components/custom_progress_loader.dart';
 import 'package:unsplash_gallery/features/components/my_context.dart';
-import 'package:unsplash_gallery/features/screens/gallery/cubit/gallery_cubit.dart';
+
 
 class CustomTimeFormatter {
   static String dateRangeFormat(DateTime? dateTime) {

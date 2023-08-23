@@ -27,17 +27,6 @@ dependencies:
   flutter_easyloading: ^3.0.5
   path_provider: ^2.1.0
   another_flushbar: ^1.12.30
-  sms_autofill: ^2.3.0
-  syncfusion_flutter_charts: ^22.2.9
-  syncfusion_flutter_datepicker: ^22.2.9
-  time_range_picker: ^2.2.0
-  flutter_expanded_tile: ^0.3.7
-  dropdown_search: ^5.0.6
-  flutter_datetime_picker_plus: ^2.0.1
-  pdf_thumbnail:
-  mime: ^1.0.4
-  image_picker: ^1.0.2
-  dotted_border: ^2.0.0+3
   flutter_dotenv: ^5.0.2
   permission_handler: ^10.4.3
 

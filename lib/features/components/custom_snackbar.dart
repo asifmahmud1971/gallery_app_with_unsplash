@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unsplash_gallery/core/constants/app_colors.dart';
 import 'package:unsplash_gallery/core/constants/app_images.dart';
 import 'package:unsplash_gallery/features/components/custom_svg.dart';
-import 'package:unsplash_gallery/features/components/my_context.dart';
 
 void showCustomSnackBar({
   required BuildContext context,
