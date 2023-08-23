@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unsplash_gallery/features/screens/gallery/cubit/gallery_cubit.dart';
-
-import '../../features/screens/auth/cubit/auth_cubit.dart';
-
 import '../../features/screens/no_internet/cubit/internet_cubit.dart';
 import '../../features/screens/theme/cubit/theme_cubit.dart';
 import 'app_dependency.dart';

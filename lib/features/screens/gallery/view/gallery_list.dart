@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:unsplash_gallery/core/constants/app_size.dart';
 import 'package:unsplash_gallery/features/components/custom_empty_body.dart';
 import 'package:unsplash_gallery/features/components/custom_refresh/pull_to_refresh.dart';
 import 'package:unsplash_gallery/features/components/custom_refresh/refresher.dart';
-import 'package:unsplash_gallery/features/components/my_context.dart';
 import 'package:unsplash_gallery/features/screens/gallery/cubit/gallery_cubit.dart';
 import 'package:unsplash_gallery/features/screens/gallery/widgets/image_view_widget.dart';
 import 'package:unsplash_gallery/features/screens/gallery/widgets/termin_card_widget.dart';
@@ -32,35 +29,34 @@ class GalleryList extends StatelessWidget {
       onRefresh: onRefresh,
       onLoading: onLoading,
       child: state.allPhotos?.length == 0 &&
-              state.status != GalleryStatus.loading
+          state.status != GalleryStatus.loading
           ? CustomEmptyBody().getEmptyBody(type: EmptyType.gallery)
           : GridView.builder(
-              gridDelegate:
-                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-              itemBuilder: (_, index) => GalleryCardWidget(
-                galleryModel: state.allPhotos?[index],
+        gridDelegate:
+        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (_, index) => GalleryCardWidget(
+          galleryModel: state.allPhotos?[index],
                 isToday: isToday,
-                onView: () {
-                  context.read<GalleryCubit>().downloadAndSaveImage(
-                      imageUrl: state.allPhotos?[index].urls?.raw,
-                      localPath: "unsplash$index");
-                  /*showModalBottomSheet(
+                onView: () async {
+                  showModalBottomSheet(
                     context: context,
                     isScrollControlled: true,
                     builder: (builder) {
                       return ImageViewWidget(
-                          imageUrl: state.allPhotos?[index].urls?.raw);
+                        imageUrl: state.allPhotos?[index].urls?.raw,
+                        fullImage: state.allPhotos?[index].urls?.full,
+                      );
                     },
-                  );*/
+                  );
                 },
                 onEdit: () {
-                  /* GetContext.to(GalleryeEditPage(
+            /* GetContext.to(GalleryeEditPage(
                         apiCall: true,
                         id: state.galleryList?.data?[index].id.toString()));*/
-                },
-              ),
-              itemCount: state.allPhotos?.length ?? 0,
-            ),
+          },
+        ),
+        itemCount: state.allPhotos?.length ?? 0,
+      ),
     );
   }
 }

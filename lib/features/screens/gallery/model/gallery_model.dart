@@ -22,23 +22,27 @@ class Urls {
   Urls({
     this.raw,
     this.small,
+    this.full,
   });
 
   Urls.fromJson(dynamic json) {
     raw = json['raw'];
 
     small = json['small'];
+    full = json['full'];
   }
 
   String? raw;
 
   String? small;
+  String? full;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['raw'] = raw;
 
     map['small'] = small;
+    map['full'] = full;
 
     return map;
   }

@@ -1,13 +1,6 @@
 import 'dart:convert';
-
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:unsplash_gallery/core/constants/app_strings.dart';
-import 'package:unsplash_gallery/features/components/my_context.dart';
-import 'package:unsplash_gallery/features/screens/auth/models/login_response.dart';
-
 import 'app_dependency.dart';
 
 const String prefsKeyLang = "prefsKeyLang";
@@ -39,11 +32,11 @@ class AppPreferences {
     sharedPreferences.setBool(prefsKeyIsUserLoggedIn, true);
   }
 
-  Future<void> saveUserData(LoginResponse userData,
+/*  Future<void> saveUserData(LoginResponse userData,
       {bool isLogin = true}) async {
     sharedPreferences.setString(prefsKeyUserInfo, json.encode(userData));
     if (isLogin) setIsUserLoggedIn();
-  }
+  }*/
 
   Future<void> setUserAccessToken(String? accessToken) async {
     sharedPreferences.setString(prefsKeyAccessToken, accessToken ?? '');
@@ -101,10 +94,10 @@ class AppPreferences {
 
   /// get preferences data start here ///
 
-  LoginResponse getUserData() {
+ /* LoginResponse getUserData() {
     return LoginResponse.fromJson(
         json.decode(sharedPreferences.getString(prefsKeyUserInfo)!));
-  }
+  }*/
 
   Future<String> getUserAccessToken() async {
     return sharedPreferences.getString(prefsKeyAccessToken) ?? "";

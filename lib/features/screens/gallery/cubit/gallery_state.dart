@@ -34,15 +34,10 @@ class GalleryState extends Equatable {
   final List<GalleryModel>? allPhotos;
   final bool hasReachedMax;
 
-  final GalleryFilterStatus filterStatus;
-
-
   const GalleryState({
     this.status = GalleryStatus.initial,
     this.allPhotos,
     this.hasReachedMax = false,
-    this.filterStatus = GalleryFilterStatus.initial,
-
   });
 
   GalleryState copyWith({
@@ -55,8 +50,6 @@ class GalleryState extends Equatable {
       status: status ?? this.status,
       allPhotos: allPhotos ?? this.allPhotos,
       hasReachedMax: hasReachedMax,
-      filterStatus: filterStatus ?? this.filterStatus,
-
     );
   }
 
@@ -65,6 +58,5 @@ class GalleryState extends Equatable {
         status,
         allPhotos ?? [],
         hasReachedMax,
-        filterStatus,
       ];
 }

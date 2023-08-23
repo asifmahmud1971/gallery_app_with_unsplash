@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:unsplash_gallery/core/constants/app_strings.dart';
-import 'package:unsplash_gallery/features/screens/auth/view/forgot_page.dart';
-import 'package:unsplash_gallery/features/screens/auth/view/forgot_success.dart';
-import 'package:unsplash_gallery/features/screens/auth/view/login_page.dart';
 import 'package:unsplash_gallery/features/screens/gallery/view/gallery_screen.dart';
 import 'package:unsplash_gallery/features/screens/splash/view/splash_screen.dart';
 
@@ -21,18 +18,6 @@ class RouteGenerator {
       case Routes.splash:
         return MaterialPageRoute(
             builder: (_) => SplashScreen(), settings: routeSettings);
-
-      case Routes.login:
-        return MaterialPageRoute(
-            builder: (_) => LoginPage(), settings: routeSettings);
-
-      case Routes.forgot:
-        return MaterialPageRoute(
-            builder: (_) => ForgotPage(), settings: routeSettings);
-
-      case Routes.forgotSuccess:
-        return MaterialPageRoute(
-            builder: (_) => ForgotSuccess(), settings: routeSettings);
 
       case Routes.galleryScreen:
         return MaterialPageRoute(

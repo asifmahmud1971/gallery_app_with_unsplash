@@ -7,7 +7,6 @@ import 'package:unsplash_gallery/core/constants/app_images.dart';
 import 'package:unsplash_gallery/core/constants/app_size.dart';
 import 'package:unsplash_gallery/features/components/custom_svg.dart';
 import 'package:unsplash_gallery/features/components/my_tooltip.dart';
-import 'package:unsplash_gallery/features/screens/auth/cubit/auth_cubit.dart';
 
 class CustomTextField extends StatefulWidget {
   final String? hint;
@@ -134,7 +133,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                       /*WidgetsBinding.instance.addPostFrameCallback(
                           (_) => MyTooltip.showOverlay(true));*/
                       MyTooltip.showOverlay(true);
-                      context.read<AuthCubit>().isTooltipOpen = true;
+                      //context.read<AuthCubit>().isTooltipOpen = true;
                     },
                     child: Icon(
                       Icons.info,
