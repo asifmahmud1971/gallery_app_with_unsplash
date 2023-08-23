@@ -1,7 +1,5 @@
 # Unsplash-Gallery
 
-Unsplash-Gallery” --org com.dinnova.unsplash_gallery”
-
 ---
 
 ## Getting Started 🚀
