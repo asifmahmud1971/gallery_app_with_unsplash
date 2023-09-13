@@ -3,6 +3,8 @@ import 'package:unsplash_gallery/core/constants/app_strings.dart';
 import 'package:unsplash_gallery/features/screens/gallery/view/gallery_screen.dart';
 import 'package:unsplash_gallery/features/screens/splash/view/splash_screen.dart';
 
+import '../screens/test_screen/view/test_view.dart';
+
 class Routes {
   static const String splash = "/";
   static const String login = "/login";
@@ -10,6 +12,7 @@ class Routes {
   static const String forgotSuccess = "/forgotSuccess";
   static const String dashboard = "/dashboard";
   static const String galleryScreen = "/galleryScreen";
+  static const String testScreen = "/testScreen";
 }
 
 class RouteGenerator {
@@ -22,6 +25,9 @@ class RouteGenerator {
       case Routes.galleryScreen:
         return MaterialPageRoute(
             builder: (_) => const GalleryScreen(), settings: routeSettings);
+      case Routes.testScreen:
+        return MaterialPageRoute(
+            builder: (_) => const TestView(), settings: routeSettings);
 
       default:
         return unDefinedRoute();

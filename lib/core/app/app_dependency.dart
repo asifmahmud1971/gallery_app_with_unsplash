@@ -11,11 +11,9 @@ final instance = GetIt.instance;
   asExtension: false,
 )
 void configureInjection() => $initGetIt(instance);
-
 @module
 abstract class AppModule {
   @preResolve
   Future<SharedPreferences> get prefs => SharedPreferences.getInstance();
-
   Dio get dio => Dio();
 }

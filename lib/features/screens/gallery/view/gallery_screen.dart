@@ -82,6 +82,10 @@ class _GalleryScreenState extends State<GalleryScreen> {
             );
           },
         ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.arrow_forward),
+          onPressed: () => Navigator.pushNamed(context, Routes.testScreen),
+        ),
       ),
     );
   }
