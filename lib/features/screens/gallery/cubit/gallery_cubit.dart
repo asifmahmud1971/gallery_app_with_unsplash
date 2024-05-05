@@ -43,7 +43,10 @@ class GalleryCubit extends Cubit<GalleryState> {
       showProgressDialog();
       page = 1;
       emit(state.copyWith(
-          status: GalleryStatus.loading, hasReachedMax: false, allPhotos: []));
+        status: GalleryStatus.loading,
+        hasReachedMax: false,
+        allPhotos: [],
+      ));
     }
     if (state.hasReachedMax) return;
 
@@ -54,16 +57,16 @@ class GalleryCubit extends Cubit<GalleryState> {
     var response = await _galleryRepositoryImp.getGalleryData({
       "client_id": dotenv.env['ACCESS_KEY'],
       "page": page,
-      "per_page": 10,
+      "per_page": 30,
     });
 
     response.fold(
       (failure) {
         dismissProgressDialog();
         showCustomSnackBar(
-            context: GetContext.context,
-            message:
-                "Something went wrong.Please check your internet connection");
+          context: GetContext.context,
+          message: "Something went wrong.Please check your internet connection",
+        );
         if (failure.code == ResponseCode.unauthorised) {
           emit(state.copyWith(status: GalleryStatus.unAuthorized));
           _appPreferences.logout();
@@ -84,6 +87,7 @@ class GalleryCubit extends Cubit<GalleryState> {
               ),
             );
           } else {
+            // state.allPhotos?.addAll(data);
             emit(
               state.copyWith(
                 status: GalleryStatus.success,
@@ -91,8 +95,11 @@ class GalleryCubit extends Cubit<GalleryState> {
               ),
             );
             try {
-              file.writeAsStringSync(json.encode(state.allPhotos),
-                  flush: true, mode: FileMode.write);
+              file.writeAsStringSync(
+                json.encode(state.allPhotos),
+                flush: true,
+                mode: FileMode.write,
+              );
             } on Exception catch (e) {
               log(e.toString());
             }
