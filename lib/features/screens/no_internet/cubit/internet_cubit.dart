@@ -27,11 +27,15 @@ class InternetCubit extends Cubit<InternetState> {
           emit(state.copyWith(status: NetworkState.connected));
         } else if (connectivityResult == ConnectivityResult.none) {
           emit(state.copyWith(
-              status: NetworkState.disconnected, previousDisconnected: true));
+            status: NetworkState.disconnected,
+            previousDisconnected: true,
+          ));
         }
       } on SocketException catch (_) {
         emit(state.copyWith(
-            status: NetworkState.disconnected, previousDisconnected: true));
+          status: NetworkState.disconnected,
+          previousDisconnected: true,
+        ));
       }
     });
   }

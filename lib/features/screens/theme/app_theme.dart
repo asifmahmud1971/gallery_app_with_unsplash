@@ -117,7 +117,7 @@ class AppTheme {
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-        primary: AppColors.kPurpleColorFour,
+        foregroundColor: AppColors.kPurpleColorFour,
       ),
     ),
     textTheme: const TextTheme(

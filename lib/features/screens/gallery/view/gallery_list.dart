@@ -29,13 +29,13 @@ class GalleryList extends StatelessWidget {
       onRefresh: onRefresh,
       onLoading: onLoading,
       child: state.allPhotos?.length == 0 &&
-          state.status != GalleryStatus.loading
+              state.status != GalleryStatus.loading
           ? CustomEmptyBody().getEmptyBody(type: EmptyType.gallery)
           : GridView.builder(
-        gridDelegate:
-        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemBuilder: (_, index) => GalleryCardWidget(
-          galleryModel: state.allPhotos?[index],
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemBuilder: (_, index) => GalleryCardWidget(
+                galleryModel: state.allPhotos?[index],
                 isToday: isToday,
                 onView: () async {
                   showModalBottomSheet(
@@ -50,13 +50,13 @@ class GalleryList extends StatelessWidget {
                   );
                 },
                 onEdit: () {
-            /* GetContext.to(GalleryeEditPage(
+                  /* GetContext.to(GalleryeEditPage(
                         apiCall: true,
                         id: state.galleryList?.data?[index].id.toString()));*/
-          },
-        ),
-        itemCount: state.allPhotos?.length ?? 0,
-      ),
+                },
+              ),
+              itemCount: state.allPhotos?.length ?? 0,
+            ),
     );
   }
 }

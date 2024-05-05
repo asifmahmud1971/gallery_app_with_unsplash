@@ -48,9 +48,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async {
-        return _onBackPressed();
-      },
+      onWillPop: () async => _onBackPressed(),
       child: Scaffold(
         appBar: CustomAppBar(
           title: AppStrings.gallery.tr(),
