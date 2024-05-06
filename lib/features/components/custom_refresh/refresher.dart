@@ -32,14 +32,11 @@ Widget customRefresher(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                  height: 25,
-                  width: 25,
-                  child: CircularProgressIndicator(
-                    strokeWidth: 2,
-                  )),
-              SizedBox(
-                width: 10,
+                height: 25,
+                width: 25,
+                child: CircularProgressIndicator(strokeWidth: 2),
               ),
+              SizedBox(width: 10),
               Text("")
             ],
           );

@@ -38,7 +38,9 @@ class ExpandedHeader extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
-                color: AppColors.kGrayColorThree, width: isExpanded ? 1 : 0),
+              color: AppColors.kGrayColorThree,
+              width: isExpanded ? 1 : 0,
+            ),
           ),
         ),
         child: Padding(

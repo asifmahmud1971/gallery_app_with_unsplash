@@ -29,7 +29,9 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
         "unsplash${DateTime.now().microsecond + Random().nextInt(1000)}";
     if (!await checkPermission()) {
       showCustomSnackBar(
-          context: GetContext.context, message: "Storage permission needed");
+        context: GetContext.context,
+        message: "Storage permission needed",
+      );
       return;
     }
     String path = await _getFilePath(fileName);
@@ -94,9 +96,7 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
         mainAxisSize: MainAxisSize.min,
         children: [
           const CircularProgressIndicator.adaptive(),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
           Text(
             "Downloading: $downloadingprogress%",
             style: const TextStyle(

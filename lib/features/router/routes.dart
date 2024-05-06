@@ -17,11 +17,15 @@ class RouteGenerator {
     switch (routeSettings.name) {
       case Routes.splash:
         return MaterialPageRoute(
-            builder: (_) => SplashScreen(), settings: routeSettings);
+          builder: (_) => SplashScreen(),
+          settings: routeSettings,
+        );
 
       case Routes.galleryScreen:
         return MaterialPageRoute(
-            builder: (_) => const GalleryScreen(), settings: routeSettings);
+          builder: (_) => const GalleryScreen(),
+          settings: routeSettings,
+        );
 
       default:
         return unDefinedRoute();
@@ -31,12 +35,8 @@ class RouteGenerator {
   static Route<dynamic> unDefinedRoute() {
     return MaterialPageRoute(
       builder: (_) => Scaffold(
-        appBar: AppBar(
-          title: const Text(AppStrings.noPageFound),
-        ),
-        body: const Center(
-          child: Text(AppStrings.noPageFound),
-        ),
+        appBar: AppBar(title: const Text(AppStrings.noPageFound)),
+        body: const Center(child: Text(AppStrings.noPageFound)),
       ),
     );
   }

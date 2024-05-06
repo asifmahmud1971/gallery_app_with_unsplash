@@ -7,7 +7,12 @@ import 'package:unsplash_gallery/features/components/custom_svg.dart';
 class ButtonWidget extends StatelessWidget {
   final String? icon;
   final VoidCallback? onPress;
-  const ButtonWidget({super.key, this.icon, this.onPress});
+
+  const ButtonWidget({
+    super.key,
+    this.icon,
+    this.onPress,
+  });
 
   @override
   Widget build(BuildContext context) {
