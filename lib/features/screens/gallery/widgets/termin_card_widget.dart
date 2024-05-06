@@ -11,12 +11,14 @@ class GalleryCardWidget extends StatelessWidget {
   final VoidCallback? onEdit;
   final GalleryModel? galleryModel;
   final bool isToday;
-  const GalleryCardWidget(
-      {super.key,
-      this.onView,
-      this.galleryModel,
-      this.onEdit,
-      this.isToday = false});
+
+  const GalleryCardWidget({
+    super.key,
+    this.onView,
+    this.galleryModel,
+    this.onEdit,
+    this.isToday = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +35,7 @@ class GalleryCardWidget extends StatelessWidget {
             color: AppColors.kGrayColorThree,
           ),
         ),
-        child: CustomImage(
-          imageUrl: galleryModel?.urls?.small,
-        ),
+        child: CustomImage(imageUrl: galleryModel?.urls?.small),
       ),
     );
   }

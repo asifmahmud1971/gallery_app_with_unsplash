@@ -66,7 +66,10 @@ class DefaultBtn extends StatelessWidget {
               mainAxisAlignment:
                   isCenter ? MainAxisAlignment.center : MainAxisAlignment.start,
               children: [
-                CustomSvg(icon: icon!, size: iconSize ?? AppCommonSize.s24),
+                CustomSvg(
+                  icon: icon!,
+                  size: iconSize ?? AppCommonSize.s24,
+                ),
                 kWidthBox8,
                 Text(
                   title,

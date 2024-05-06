@@ -66,7 +66,7 @@ class CustomImage extends StatelessWidget {
                 ),
                 child: CustomSvg(
                   icon: placeHolder ?? AppImages.iconsPlaceholder,
-                  fit: fit ?? BoxFit.fill,
+                  fit: fit ?? BoxFit.cover,
                 ),
               ),
               errorWidget: (context, url, error) => isCircle
@@ -79,12 +79,12 @@ class CustomImage extends StatelessWidget {
                           color: bgColor ?? Colors.white),
                       child: CustomSvg(
                         icon: placeHolder ?? AppImages.iconsPlaceholder,
-                        fit: fit ?? BoxFit.fill,
+                        fit: fit ?? BoxFit.cover,
                       ),
                     )
                   : CustomSvg(
                       icon: placeHolder ?? AppImages.iconsPlaceholder,
-                      fit: fit ?? BoxFit.fill,
+                      fit: fit ?? BoxFit.cover,
                     ),
             ),
           )
@@ -100,7 +100,7 @@ class CustomImage extends StatelessWidget {
                   ),
             child: CustomSvg(
               icon: placeHolder ?? AppImages.iconsPlaceholder,
-              fit: fit ?? BoxFit.fill,
+              fit: fit ?? BoxFit.cover,
             ),
           );
   }

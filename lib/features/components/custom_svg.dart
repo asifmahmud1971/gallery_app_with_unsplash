@@ -8,15 +8,23 @@ class CustomSvg extends StatelessWidget {
   final double? size;
   final BoxFit? fit;
 
-  const CustomSvg(
-      {Key? key, required this.icon, this.color, this.fit, this.size})
-      : super(key: key);
+  const CustomSvg({
+    Key? key,
+    required this.icon,
+    this.color,
+    this.fit,
+    this.size,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       icon,
-      color: color,
+      //color: color,
+      colorFilter: ColorFilter.mode(
+        Colors.black,
+        BlendMode.srcIn,
+      ),
       height: size ?? AppCommonSize.s22,
       width: size ?? AppCommonSize.s22,
       fit: fit ?? BoxFit.contain,

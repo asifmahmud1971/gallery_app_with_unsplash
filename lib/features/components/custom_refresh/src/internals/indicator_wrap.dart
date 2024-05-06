@@ -35,13 +35,13 @@ abstract class RefreshIndicator extends StatefulWidget {
   /// the stopped time when refresh complete or fail
   final Duration completeDuration;
 
-  const RefreshIndicator(
-      {Key? key,
-      this.height = 60.0,
-      this.offset = 0.0,
-      this.completeDuration = const Duration(milliseconds: 500),
-      this.refreshStyle = RefreshStyle.Follow})
-      : super(key: key);
+  const RefreshIndicator({
+    Key? key,
+    this.height = 60.0,
+    this.offset = 0.0,
+    this.completeDuration = const Duration(milliseconds: 500),
+    this.refreshStyle = RefreshStyle.Follow,
+  }) : super(key: key);
 }
 
 /// a widget  implements  pull up load
@@ -55,12 +55,12 @@ abstract class LoadIndicator extends StatefulWidget {
   /// callback when user click footer
   final VoidCallback? onClick;
 
-  const LoadIndicator(
-      {Key? key,
-      this.onClick,
-      this.loadStyle = LoadStyle.ShowAlways,
-      this.height = 60.0})
-      : super(key: key);
+  const LoadIndicator({
+    Key? key,
+    this.onClick,
+    this.loadStyle = LoadStyle.ShowAlways,
+    this.height = 60.0,
+  }) : super(key: key);
 }
 
 /// Internal Implementation of Head Indicator

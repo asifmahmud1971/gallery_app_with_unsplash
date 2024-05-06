@@ -1,7 +1,5 @@
 class GalleryModel {
-  GalleryModel({
-    this.urls,
-  });
+  GalleryModel({this.urls});
 
   GalleryModel.fromJson(dynamic json) {
     urls = json['urls'] != null ? Urls.fromJson(json['urls']) : null;
@@ -27,20 +25,17 @@ class Urls {
 
   Urls.fromJson(dynamic json) {
     raw = json['raw'];
-
     small = json['small'];
     full = json['full'];
   }
 
   String? raw;
-
   String? small;
   String? full;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['raw'] = raw;
-
     map['small'] = small;
     map['full'] = full;
 

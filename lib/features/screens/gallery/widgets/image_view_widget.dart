@@ -25,16 +25,17 @@ class ImageViewWidget extends StatelessWidget {
         onPress: () async {
           if (await Permission.storage.request().isGranted) {
             showDialog(
-                barrierDismissible: false,
-                context: context,
-                builder: (context) {
-                  return DownloadingDialog(
-                    url: fullImage,
-                  );
-                });
+              barrierDismissible: false,
+              context: context,
+              builder: (context) {
+                return DownloadingDialog(url: fullImage);
+              },
+            );
           } else {
             showCustomSnackBar(
-                context: context, message: "Storage permission needed");
+              context: context,
+              message: "Storage permission needed",
+            );
           }
         },
       ),

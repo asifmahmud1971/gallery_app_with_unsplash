@@ -52,9 +52,9 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
     } on Exception catch (e) {
       Navigator.pop(context);
       showCustomSnackBar(
-          context: context,
-          message:
-              "Something went wrong.Please check your internet connection");
+        context: context,
+        message: "Something went wrong.Please check your internet connection",
+      );
     }
   }
 

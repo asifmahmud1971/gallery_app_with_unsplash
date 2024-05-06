@@ -7,10 +7,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unsplash_gallery/core/constants/app_strings.dart';
 import 'package:unsplash_gallery/features/components/custom_appbar.dart';
 import 'package:unsplash_gallery/features/components/custom_dialogs.dart';
+import 'package:unsplash_gallery/features/components/custom_drawer.dart';
 import 'package:unsplash_gallery/features/components/custom_refresh/pull_to_refresh.dart';
 import 'package:unsplash_gallery/features/router/routes.dart';
 import 'package:unsplash_gallery/features/screens/gallery/cubit/gallery_cubit.dart';
 import 'package:unsplash_gallery/features/screens/gallery/view/gallery_list.dart';
+
+import '../../../../core/constants/app_colors.dart';
+import '../../../../core/constants/app_size.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -40,47 +44,57 @@ class _GalleryScreenState extends State<GalleryScreen> {
       title: AppStrings.appExitTitle.tr(),
       details: AppStrings.appExitTitleDesc.tr(),
       onYes: () => SystemNavigator.pop(),
-    ).show().then(
-          (value) => value as bool,
-        );
+    ).show().then((value) => value as bool);
   }
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => _onBackPressed(),
-      child: Scaffold(
-        appBar: CustomAppBar(
-          title: AppStrings.gallery.tr(),
-          onPress: () {
-            Navigator.pop(context);
-            getData();
-          },
-        ),
-        body: BlocConsumer<GalleryCubit, GalleryState>(
-          listener: (context, state) {
-            if (state.status == GalleryStatus.unAuthorized) {
-              CustomDialog.showUnAuthorisedDialog(
-                context: context,
-                onYes: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, Routes.login, (route) => false);
-                },
-              );
-            }
-          },
-          builder: (context, state) {
-            return GalleryList(
+    return BlocConsumer<GalleryCubit, GalleryState>(
+      builder: (context, state) {
+        return PopScope(
+          onPopInvoked: (bool didPop) => _onBackPressed(),
+          child: Scaffold(
+            drawer: CustomDrawer(),
+            appBar: CustomAppBar(
+              title: AppStrings.gallery.tr(),
+              onPress: () {
+                Navigator.pop(context);
+                getData();
+              },
+              actions: [
+                Text(
+                  "${state.allPhotos?.length ?? "0"}",
+                  style: kH3Text.copyWith(
+                    fontWeight: semiBoldFont,
+                    color: AppColors.kWhiteColorOne,
+                  ),
+                ),
+                kWidthBox5,
+              ],
+            ),
+
+            body: GalleryList(
               controller: context.read<GalleryCubit>().homeController,
               state: state,
               onRefresh: () {
                 getData();
               },
               onLoading: state.hasReachedMax ? null : getData,
-            );
-          },
-        ),
-      ),
+            ),
+          ),
+        );
+      },
+      listener: (context, state) {
+        if (state.status == GalleryStatus.unAuthorized) {
+          CustomDialog.showUnAuthorisedDialog(
+            context: context,
+            onYes: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, Routes.login, (route) => false);
+            },
+          );
+        }
+      },
     );
   }
 }

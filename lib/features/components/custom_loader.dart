@@ -23,7 +23,9 @@ class CustomLoader extends StatelessWidget {
               width: AppCommonSize.s100,
               padding: const EdgeInsets.all(30),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
               child: SpinKitPouringHourGlass(
                 duration: Duration(milliseconds: 1500),
                 size: AppCommonSize.s40,

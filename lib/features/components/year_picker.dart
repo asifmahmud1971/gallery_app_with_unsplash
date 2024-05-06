@@ -10,9 +10,7 @@ Future flutterYearPicker(BuildContext context,
         title: Column(
           children: const [
             Text('Select a Year'),
-            Divider(
-              thickness: 1,
-            )
+            Divider(thickness: 1),
           ],
         ),
         contentPadding: const EdgeInsets.all(10),
@@ -34,13 +32,13 @@ Future flutterYearPicker(BuildContext context,
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 0),
+                      horizontal: 8.0,
+                      vertical: 0,
+                    ),
                     child: Chip(
                       label: Container(
                         padding: const EdgeInsets.all(5),
-                        child: Text(
-                          (2050 - index).toString(),
-                        ),
+                        child: Text((2050 - index).toString()),
                       ),
                     ),
                   ),

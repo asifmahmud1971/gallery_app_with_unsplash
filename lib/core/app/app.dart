@@ -20,7 +20,9 @@ class InitApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: AppProviders.providers, child: const MyApp());
+      providers: AppProviders.providers,
+      child: const MyApp(),
+    );
   }
 }
 

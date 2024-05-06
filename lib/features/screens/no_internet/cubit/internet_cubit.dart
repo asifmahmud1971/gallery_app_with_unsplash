@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-
 import 'package:bloc/bloc.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:equatable/equatable.dart';
@@ -18,26 +17,27 @@ class InternetCubit extends Cubit<InternetState> {
   }
 
   void monitorInternetConnection() async {
-    connectivityStreamSubscription =
-        connectivity!.onConnectivityChanged.listen((connectivityResult) async {
-      try {
-        if (connectivityResult == ConnectivityResult.wifi ||
-            connectivityResult == ConnectivityResult.mobile ||
-            connectivityResult == ConnectivityResult.ethernet) {
-          emit(state.copyWith(status: NetworkState.connected));
-        } else if (connectivityResult == ConnectivityResult.none) {
+    connectivityStreamSubscription = connectivity!.onConnectivityChanged.listen(
+      (connectivityResult) async {
+        try {
+          if (connectivityResult == ConnectivityResult.wifi ||
+              connectivityResult == ConnectivityResult.mobile ||
+              connectivityResult == ConnectivityResult.ethernet) {
+            emit(state.copyWith(status: NetworkState.connected));
+          } else if (connectivityResult == ConnectivityResult.none) {
+            emit(state.copyWith(
+              status: NetworkState.disconnected,
+              previousDisconnected: true,
+            ));
+          }
+        } on SocketException catch (_) {
           emit(state.copyWith(
             status: NetworkState.disconnected,
             previousDisconnected: true,
           ));
         }
-      } on SocketException catch (_) {
-        emit(state.copyWith(
-          status: NetworkState.disconnected,
-          previousDisconnected: true,
-        ));
-      }
-    });
+      },
+    );
   }
 
   @override

@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 
 extension SizedBoxExtension on double {
   kWidthSizedBox() {
-    return SizedBox(
-      width: this,
-    );
+    return SizedBox(width: this);
   }
 
   kHeightSizedBox() {
-    return SizedBox(
-      height: this,
-    );
+    return SizedBox(height: this);
   }
 }
 

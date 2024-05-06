@@ -71,7 +71,10 @@ class CustomButton extends StatelessWidget {
                     ? MainAxisAlignment.center
                     : MainAxisAlignment.start,
                 children: [
-                  CustomSvg(icon: icon!, size: iconSize ?? AppCommonSize.s24),
+                  CustomSvg(
+                    icon: icon!,
+                    size: iconSize ?? AppCommonSize.s24,
+                  ),
                   kWidthBox8,
                   Text(
                     title,
@@ -114,8 +117,7 @@ class CustomButton extends StatelessWidget {
                 textAlign: TextAlign.start,
                 style: textStyle ??
                     kButtonText.copyWith(
-                      color: outlineButton ? textColor : textColor,
-                    ),
+                        color: outlineButton ? textColor : textColor),
               ),
             ),
           );

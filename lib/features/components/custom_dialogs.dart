@@ -373,9 +373,7 @@ class CustomDialog {
                     ),
                   ),
                   kHeightBox20,
-                  Divider(
-                    height: 0,
-                  ),
+                  Divider(height: 0),
                   TextButton(
                     onPressed: onYes ??
                         () {

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:unsplash_gallery/features/components/custom_progress_loader.dart';
 import 'package:unsplash_gallery/features/components/my_context.dart';
 
-
 class CustomTimeFormatter {
   static String dateRangeFormat(DateTime? dateTime) {
     return DateFormat('dd.MM.yyyy').format(dateTime ?? DateTime.now());

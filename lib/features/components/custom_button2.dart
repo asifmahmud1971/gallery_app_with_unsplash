@@ -67,9 +67,7 @@ class CustomButton2 extends StatelessWidget {
                   ? Colors.transparent
                   : borderColor,
         ),
-        borderRadius: BorderRadius.circular(
-          radius,
-        ),
+        borderRadius: BorderRadius.circular(radius),
         boxShadow: [AppColors.kOrdinaryShadow],
       ),
       child: Material(
@@ -81,7 +79,9 @@ class CustomButton2 extends StatelessWidget {
           child: Padding(
             padding: padding ??
                 EdgeInsets.symmetric(
-                    vertical: AppCommonSize.s8, horizontal: AppCommonSize.s20),
+                  vertical: AppCommonSize.s8,
+                  horizontal: AppCommonSize.s20,
+                ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,

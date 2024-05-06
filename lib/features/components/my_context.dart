@@ -15,9 +15,7 @@ class GetContext {
       CupertinoPageRoute<dynamic>(
         fullscreenDialog: false,
         builder: (BuildContext context) => page,
-        settings: RouteSettings(
-          arguments: arguments,
-        ),
+        settings: RouteSettings(arguments: arguments),
       ),
     );
   }
@@ -32,8 +30,11 @@ class GetContext {
     TO? result,
     Object? arguments,
   }) {
-    return Navigator.of(context).restorablePopAndPushNamed<T, TO>(routeName,
-        arguments: arguments, result: result);
+    return Navigator.of(context).restorablePopAndPushNamed<T, TO>(
+      routeName,
+      arguments: arguments,
+      result: result,
+    );
   }
 
   static void back([dynamic result]) {

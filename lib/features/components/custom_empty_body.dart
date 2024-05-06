@@ -14,14 +14,19 @@ class CustomEmptyBody extends StatelessWidget {
   final String? icons;
   final String? text;
 
-  const CustomEmptyBody({Key? key, this.icons, this.text}) : super(key: key);
+  const CustomEmptyBody({
+    Key? key,
+    this.icons,
+    this.text,
+  }) : super(key: key);
 
   Widget getEmptyBody({EmptyType? type}) {
     switch (type) {
       case EmptyType.gallery:
         return CustomEmptyBody(
-            icons: AppImages.activeDoc, text: AppStrings.noDataFound.tr());
-
+          icons: AppImages.activeDoc,
+          text: AppStrings.noDataFound.tr(),
+        );
       default:
         return Container();
     }

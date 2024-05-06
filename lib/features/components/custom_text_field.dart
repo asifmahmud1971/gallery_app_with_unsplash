@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unsplash_gallery/core/constants/app_colors.dart';
 import 'package:unsplash_gallery/core/constants/app_images.dart';
@@ -117,8 +116,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
               widget.title ?? "",
               style: widget.titleStyle ??
                   kRegularLine20.copyWith(
-                      fontWeight: FontWeight.w500,
-                      color: widget.titleColor ?? Colors.grey),
+                    fontWeight: FontWeight.w500,
+                    color: widget.titleColor ?? Colors.grey,
+                  ),
             ),
             5.horizontalSpace,
             Visibility(
@@ -159,96 +159,109 @@ class _CustomTextFieldState extends State<CustomTextField> {
           style: kRegularLine16.copyWith(color: widget.textColor),
           obscuringCharacter: "●",
           decoration: InputDecoration(
-              counter: widget.counterWidget ?? SizedBox(),
-              contentPadding: EdgeInsets.only(
-                  top: widget.height ?? AppHeight.s15,
-                  bottom: widget.height ?? AppHeight.s15,
-                  left: widget.weight ?? AppWeight.s10,
-                  right: AppWeight.s5),
-              isDense: true,
-              prefixIconConstraints: BoxConstraints.tightFor(width: 35.w),
-              prefixIcon: widget.prefixIcon == null
-                  ? null
-                  : Icon(
-                      widget.prefixIcon,
-                      color: widget.prefixIconColor ?? Colors.grey,
-                    ),
-              suffixIcon: widget.isPassword
-                  ? Padding(
-                      padding: const EdgeInsets.all(14.0),
-                      child: InkWell(
-                        onTap: _toggleVisibility,
-                        child: CustomSvg(
-                          icon: isVisible
-                              ? AppImages.iconVisibilityOff
-                              : AppImages.iconVisibility,
-                          color: AppColors.kDarkGrayColor3,
-                          size: AppCommonSize.s20,
-                        ),
+            counter: widget.counterWidget ?? SizedBox(),
+            contentPadding: EdgeInsets.only(
+              top: widget.height ?? AppHeight.s15,
+              bottom: widget.height ?? AppHeight.s15,
+              left: widget.weight ?? AppWeight.s10,
+              right: AppWeight.s5,
+            ),
+            isDense: true,
+            prefixIconConstraints: BoxConstraints.tightFor(width: 35.w),
+            prefixIcon: widget.prefixIcon == null
+                ? null
+                : Icon(
+                    widget.prefixIcon,
+                    color: widget.prefixIconColor ?? Colors.grey,
+                  ),
+            suffixIcon: widget.isPassword
+                ? Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: InkWell(
+                      onTap: _toggleVisibility,
+                      child: CustomSvg(
+                        icon: isVisible
+                            ? AppImages.iconVisibilityOff
+                            : AppImages.iconVisibility,
+                        color: AppColors.kDarkGrayColor3,
+                        size: AppCommonSize.s20,
                       ),
-                    )
-                  : widget.suffixText == null
-                      ? null
-                      : SizedBox(
-                          width: 20.w,
-                          child: InkWell(
-                            onTap: widget.onPress,
-                            child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 10),
-                                child: Text(
-                                  widget.suffixText!,
-                                  maxLines: 1,
-                                  textAlign: TextAlign.center,
-                                  style: kRegularLine12.copyWith(
-                                      color: widget.suffixIconColor,
-                                      fontWeight: FontWeight.w500),
+                    ),
+                  )
+                : widget.suffixText == null
+                    ? null
+                    : SizedBox(
+                        width: 20.w,
+                        child: InkWell(
+                          onTap: widget.onPress,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 10),
+                              child: Text(
+                                widget.suffixText!,
+                                maxLines: 1,
+                                textAlign: TextAlign.center,
+                                style: kRegularLine12.copyWith(
+                                  color: widget.suffixIconColor,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
                             ),
                           ),
                         ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: widget.borderColor ?? Colors.red, width: 1.0),
-                borderRadius:
-                    BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+                      ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: widget.borderColor ?? Colors.red,
+                width: 1.0,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: widget.borderColor ?? Colors.black12, width: 1.0),
-                borderRadius:
-                    BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+              borderRadius:
+                  BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: widget.borderColor ?? Colors.black12,
+                width: 1.0,
               ),
-              border: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: widget.borderColor ?? Colors.white, width: 1.0),
-                borderRadius:
-                    BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+              borderRadius:
+                  BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+            ),
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: widget.borderColor ?? Colors.white,
+                width: 1.0,
               ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: widget.borderColor ?? Colors.black12, width: 1.0),
-                borderRadius:
-                    BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+              borderRadius:
+                  BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: widget.borderColor ?? Colors.black12,
+                width: 1.0,
               ),
-              errorBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: widget.borderColor ?? Colors.red, width: 1.0),
-                borderRadius:
-                    BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+              borderRadius:
+                  BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                color: widget.borderColor ?? Colors.red,
+                width: 1.0,
               ),
-              filled: true,
-              errorStyle: const TextStyle(height: 0),
-              hintStyle: TextStyle(
-                fontSize: widget.hintTextSize ?? AppTextSize.s16,
-                color: widget.hintColor ?? Colors.white.withOpacity(0.4),
-                fontWeight: FontWeight.w400,
-              ),
-              hintText: widget.hint,
-              errorText: widget.errorText,
-              fillColor: widget.fillColor ?? Colors.white),
+              borderRadius:
+                  BorderRadius.circular(widget.radius ?? AppCommonSize.s10),
+            ),
+            filled: true,
+            errorStyle: const TextStyle(height: 0),
+            hintStyle: TextStyle(
+              fontSize: widget.hintTextSize ?? AppTextSize.s16,
+              color: widget.hintColor ?? Colors.white.withOpacity(0.4),
+              fontWeight: FontWeight.w400,
+            ),
+            hintText: widget.hint,
+            errorText: widget.errorText,
+            fillColor: widget.fillColor ?? Colors.white,
+          ),
           validator: widget.validation as String? Function(String?)?,
           onSaved: widget.onSaved as String? Function(String?)?,
         ),

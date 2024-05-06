@@ -57,7 +57,7 @@ class GalleryCubit extends Cubit<GalleryState> {
     var response = await _galleryRepositoryImp.getGalleryData({
       "client_id": dotenv.env['ACCESS_KEY'],
       "page": page,
-      "per_page": 30,
+      "per_page": 20,
     });
 
     response.fold(
@@ -106,7 +106,9 @@ class GalleryCubit extends Cubit<GalleryState> {
           }
         } else {
           emit(state.copyWith(
-              status: GalleryStatus.success, hasReachedMax: true));
+            status: GalleryStatus.success,
+            hasReachedMax: true,
+          ));
         }
         homeController.refreshCompleted();
         homeController.loadComplete();

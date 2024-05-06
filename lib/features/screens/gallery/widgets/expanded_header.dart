@@ -43,8 +43,9 @@ class ExpandedHeader extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: AppWeight.s14,
-              vertical: headerHeight ?? AppHeight.s8),
+            horizontal: AppWeight.s14,
+            vertical: headerHeight ?? AppHeight.s8,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -53,10 +54,12 @@ class ExpandedHeader extends StatelessWidget {
                 style: isDetails!
                     ? kRegularLine16.copyWith(
                         color: AppColors.kPurpleColorFour,
-                        fontWeight: FontWeight.w600)
+                        fontWeight: FontWeight.w600,
+                      )
                     : kP3Text.copyWith(
                         color: AppColors.kAshColorThree,
-                        fontWeight: regularFont),
+                        fontWeight: regularFont,
+                      ),
               ),
               Icon(
                 isExpanded

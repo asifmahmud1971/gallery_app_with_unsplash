@@ -17,12 +17,13 @@ class MyTooltip {
     final offset = renderBox.localToGlobal(Offset.zero);
 
     entry = OverlayEntry(
-        builder: (context) => Positioned(
-            left: offset.dx,
-            top: offset.dy + size.height - 12,
-            width: size.width,
-            child: buildOverLay()));
-
+      builder: (context) => Positioned(
+        left: offset.dx,
+        top: offset.dy + size.height - 12,
+        width: size.width,
+        child: buildOverLay(),
+      ),
+    );
     overLay.insert(entry);
   }
 
@@ -32,16 +33,21 @@ class MyTooltip {
         child: Stack(
           children: [
             Container(
-              padding:
-                  REdgeInsets.only(top: 20, left: 15, right: 10, bottom: 10),
+              padding: REdgeInsets.only(
+                top: 20,
+                left: 15,
+                right: 10,
+                bottom: 10,
+              ),
               width: 200.w,
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                  )),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -55,13 +61,14 @@ class MyTooltip {
               ),
             ),
             Positioned(
-                top: 3,
-                left: 3,
-                child: Icon(
-                  Icons.info_outline,
-                  size: 13.r,
-                  color: AppColors.kPurpleColorTwo,
-                ))
+              top: 3,
+              left: 3,
+              child: Icon(
+                Icons.info_outline,
+                size: 13.r,
+                color: AppColors.kPurpleColorTwo,
+              ),
+            )
           ],
         ),
       );
@@ -82,7 +89,9 @@ class MyTooltip {
               child: Text(
                 text,
                 style: kRegularLine12.copyWith(
-                    fontWeight: FontWeight.w400, color: Colors.grey),
+                  fontWeight: FontWeight.w400,
+                  color: Colors.grey,
+                ),
               ),
             )
           ],

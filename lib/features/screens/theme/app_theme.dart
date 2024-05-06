@@ -39,30 +39,24 @@ class AppTheme {
     primaryColor: AppColors.kPurpleColorFour,
     secondaryHeaderColor: AppColors.kPurpleColorOne,
     disabledColor: const Color(0xFFBABFC4),
-    backgroundColor: AppColors.kBgColor,
     scaffoldBackgroundColor: AppColors.kWhiteColorTwo,
-    errorColor: const Color(0xFFE84D4F),
     brightness: Brightness.light,
     hintColor: const Color(0xFF808080),
     cardColor: AppColors.kWhiteColor,
-    colorScheme: const ColorScheme.light(
-      primary: AppColors.kPurpleColorFour,
-      secondary: AppColors.kPurpleColorOne,
-    ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: AppColors.kPurpleColorFour,
       ),
     ),
-    textTheme: const TextTheme(
-      headline1: TextStyle(
+    textTheme: TextTheme(
+      displayLarge: TextStyle(
         color: AppColors.kBlackColor2,
         fontSize: 15,
         fontWeight: FontWeight.w500,
         height: 1.25,
         fontStyle: FontStyle.normal,
       ),
-      headline2: TextStyle(
+      displayMedium: TextStyle(
         color: AppColors.kBlackColor2,
         fontSize: 15,
         fontWeight: FontWeight.w400,
@@ -70,6 +64,12 @@ class AppTheme {
         fontStyle: FontStyle.normal,
       ),
     ),
+    colorScheme: const ColorScheme.light(
+      primary: AppColors.kPurpleColorFour,
+      secondary: AppColors.kPurpleColorOne,
+    )
+        .copyWith(background: AppColors.kBgColor)
+        .copyWith(error: const Color(0xFFE84D4F)),
   );
 
   /// light theme end here ///
@@ -86,12 +86,8 @@ class AppTheme {
       ),
       backgroundColor: AppColors.kCardDarkColor,
       elevation: 0.0,
-      iconTheme: IconThemeData(
-        color: AppColors.kWhiteColor,
-      ),
-      actionsIconTheme: IconThemeData(
-        color: AppColors.kBlackColor2,
-      ),
+      iconTheme: IconThemeData(color: AppColors.kWhiteColor),
+      actionsIconTheme: IconThemeData(color: AppColors.kBlackColor2),
       centerTitle: true,
       systemOverlayStyle: SystemUiOverlayStyle(
         statusBarColor: AppColors.kCardDarkColor,
@@ -105,36 +101,35 @@ class AppTheme {
     primaryColor: AppColors.kPurpleColorFour,
     secondaryHeaderColor: AppColors.kPurpleColorOne,
     disabledColor: const Color(0xffa2a7ad),
-    backgroundColor: AppColors.kBgDarkColor,
     scaffoldBackgroundColor: AppColors.kBgDarkColor,
-    errorColor: const Color(0xFFdd3135),
     brightness: Brightness.dark,
     hintColor: const Color(0xFFbebebe),
     cardColor: AppColors.kCardDarkColor,
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: AppColors.kPurpleColorFour),
+    ),
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(
+        color: AppColors.kWhiteColor,
+        fontSize: 15,
+        fontWeight: FontWeight.w500,
+        height: 1.25,
+        fontStyle: FontStyle.normal,
+      ),
+      displayMedium: TextStyle(
+        color: AppColors.kWhiteColor,
+        fontSize: 15,
+        fontWeight: FontWeight.w400,
+        height: 1.25,
+        fontStyle: FontStyle.normal,
+      ),
+    ),
     colorScheme: const ColorScheme.dark(
       primary: AppColors.kPurpleColorFour,
       secondary: AppColors.kPurpleColorOne,
-    ),
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(
-        foregroundColor: AppColors.kPurpleColorFour,
-      ),
-    ),
-    textTheme: const TextTheme(
-        headline1: TextStyle(
-          color: AppColors.kWhiteColor,
-          fontSize: 15,
-          fontWeight: FontWeight.w500,
-          height: 1.25,
-          fontStyle: FontStyle.normal,
-        ),
-        headline2: TextStyle(
-          color: AppColors.kWhiteColor,
-          fontSize: 15,
-          fontWeight: FontWeight.w400,
-          height: 1.25,
-          fontStyle: FontStyle.normal,
-        )),
+    )
+        .copyWith(background: AppColors.kBgDarkColor)
+        .copyWith(error: const Color(0xFFdd3135)),
   );
 
   /// dark theme end here ///
@@ -143,17 +138,19 @@ class AppTheme {
       SchedulerBinding.instance.window.platformBrightness;
 
   static setStatusBarAndNavigationBarColors(ThemeMode themeMode) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness:
-          themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
-      systemNavigationBarIconBrightness:
-          themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
-      systemNavigationBarColor: themeMode == ThemeMode.light
-          ? AppColors.kWhiteColor
-          : AppColors.kBgDarkColor,
-      systemNavigationBarDividerColor: Colors.transparent,
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness:
+            themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
+        systemNavigationBarIconBrightness:
+            themeMode == ThemeMode.light ? Brightness.dark : Brightness.light,
+        systemNavigationBarColor: themeMode == ThemeMode.light
+            ? AppColors.kWhiteColor
+            : AppColors.kBgDarkColor,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
+    );
   }
 }
 

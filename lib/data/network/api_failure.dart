@@ -11,6 +11,10 @@ class ApiFailure {
 
 class DefaultFailure extends ApiFailure {
   DefaultFailure()
-      : super(ResponseCode.defaultError, ResponseMessage.defaultError,
-            ResponseMessage.defaultError, ResponseMessage.defaultError);
+      : super(
+          ResponseCode.defaultError,
+          ResponseMessage.defaultError,
+          ResponseMessage.defaultError,
+          ResponseMessage.defaultError,
+        );
 }

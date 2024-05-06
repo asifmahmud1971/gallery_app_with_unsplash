@@ -7,13 +7,13 @@ class CustomTooltip extends StatelessWidget {
   final Color? iconColor;
   final double? iconSize;
 
-  const CustomTooltip(
-      {Key? key,
-      @required this.message,
-      @required this.child,
-      this.iconColor,
-      this.iconSize})
-      : super(key: key);
+  const CustomTooltip({
+    Key? key,
+    @required this.message,
+    @required this.child,
+    this.iconColor,
+    this.iconSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +21,22 @@ class CustomTooltip extends StatelessWidget {
     return Tooltip(
       key: key,
       message: message,
-      margin: EdgeInsets.only(left: 50.w, right: 15.w),
+      margin: EdgeInsets.only(
+        left: 50.w,
+        right: 15.w,
+      ),
       padding: EdgeInsets.all(10.w),
       preferBelow: true,
       verticalOffset: -8.w,
-      textStyle:
-          const TextStyle(color: Color(0xFF787878), fontFamily: "Poppins"),
+      textStyle: const TextStyle(
+        color: Color(0xFF787878),
+        fontFamily: "Poppins",
+      ),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.white,
-          border: Border.all(color: Colors.amber)),
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        border: Border.all(color: Colors.amber),
+      ),
       child: GestureDetector(
         behavior: HitTestBehavior.translucent,
         onTap: () => _onTap(key),

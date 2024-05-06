@@ -15,19 +15,21 @@ class CustomPaintBG extends CustomPainter {
     path_0.lineTo(0, 0);
     path_0.lineTo(0, size.height * 0.5694915);
     path_0.cubicTo(
-        size.width * 0.1220930,
-        size.height * 0.8779661,
-        size.width * 0.2813953,
-        size.height * 0.9457627,
-        size.width * 0.4662791,
-        size.height * 0.8830508);
+      size.width * 0.1220930,
+      size.height * 0.8779661,
+      size.width * 0.2813953,
+      size.height * 0.9457627,
+      size.width * 0.4662791,
+      size.height * 0.8830508,
+    );
     path_0.cubicTo(
-        size.width * 0.6848837,
-        size.height * 0.7694915,
-        size.width * 0.8208512,
-        size.height * 0.7337831,
-        size.width,
-        size.height * 0.9970237);
+      size.width * 0.6848837,
+      size.height * 0.7694915,
+      size.width * 0.8208512,
+      size.height * 0.7337831,
+      size.width,
+      size.height * 0.9970237,
+    );
     path_0.lineTo(size.width, 0);
     path_0.close();
 

@@ -57,7 +57,7 @@ class AppColors {
         Color(0xFF3F8AA7),
         Color(0xFF75B5CE),
         Color(0xFF67A7C0),
-        Color(0xFF5A9EB8)
+        Color(0xFF5A9EB8),
       ]);
 
   static const kGradientColorStartTwo = Color(0xFF3F8AA7);

@@ -10,10 +10,12 @@ import 'package:unsplash_gallery/features/components/custom_svg.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final VoidCallback? onPress;
-  const CustomAppBar({
+  List<Widget>? actions;
+  CustomAppBar({
     Key? key,
     this.title,
     this.onPress,
+    this.actions
   }) : super(key: key);
 
   @override
@@ -47,6 +49,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             color: AppColors.kWhiteColorOne,
           ),
         ),
+        actions: actions??[],
       ),
     );
   }

@@ -83,12 +83,16 @@ class _WaterDropHeaderState extends RefreshIndicatorState<WaterDropHeader>
   void initState() {
     // TODO: implement initState
     _dismissCtl = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 400), value: 1.0);
+      vsync: this,
+      duration: Duration(milliseconds: 400),
+      value: 1.0,
+    );
     _animationController = AnimationController(
-        vsync: this,
-        lowerBound: 0.0,
-        upperBound: 50.0,
-        duration: Duration(milliseconds: 400));
+      vsync: this,
+      lowerBound: 0.0,
+      upperBound: 50.0,
+      duration: Duration(milliseconds: 400),
+    );
     super.initState();
   }
 
@@ -120,9 +124,7 @@ class _WaterDropHeaderState extends RefreshIndicatorState<WaterDropHeader>
                 Icons.done,
                 color: Colors.grey,
               ),
-              Container(
-                width: 15.0,
-              ),
+              Container(width: 15.0),
               Text(
                 (EnRefreshString()).refreshCompleteText!,
                 style: TextStyle(color: Colors.grey),
@@ -138,9 +140,7 @@ class _WaterDropHeaderState extends RefreshIndicatorState<WaterDropHeader>
                 Icons.close,
                 color: Colors.grey,
               ),
-              Container(
-                width: 15.0,
-              ),
+              Container(width: 15.0),
               Text(
                   (RefreshLocalizations.of(context)?.currentLocalization ??
                           EnRefreshString())
