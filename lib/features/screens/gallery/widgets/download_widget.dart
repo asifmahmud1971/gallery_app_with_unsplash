@@ -88,7 +88,7 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
 
   @override
   Widget build(BuildContext context) {
-    String downloadingprogress = (progress * 100).toInt().toString();
+    String downloadingProgress = (progress * 100).toInt().toString();
 
     return AlertDialog(
       backgroundColor: Colors.black,
@@ -98,7 +98,7 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
           const CircularProgressIndicator.adaptive(),
           const SizedBox(height: 20),
           Text(
-            "Downloading: $downloadingprogress%",
+            "Downloading: ${downloadingProgress}%",
             style: const TextStyle(
               color: Colors.white,
               fontSize: 17,
