@@ -7,7 +7,7 @@ const String kBase64Extend = 'data:image/jpeg;base64,';
 const String kBase64ExtendVideo = 'data:video/mp4;base64,';
 const String kBase64ExtendAudio = 'data:audio/mp3;base64,';
 const String kDemoImage =
-    'https://media.istockphoto.com/photos/young-beautiful-woman-picture-id1294339577?b=1&k=20&m=1294339577&s=170667a&w=0&h=_5-SM0Dmhb1fhRdz64lOUJMy8oic51GB_2_IPlhCCnU=';
+    'https://images.unsplash.com/photo-1714818282987-7d61de55302e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTI0NTZ8MHwxfGFsbHw3OHx8fHx8fDJ8fDE3MTUxNDUyOTN8&ixlib=rb-4.0.3&q=80&w=400';
 
 const String kUSD = 'USD';
 const String kBDT = 'BDT';

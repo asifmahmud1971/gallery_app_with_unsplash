@@ -70,9 +70,18 @@ class _GalleryScreenState extends State<GalleryScreen> {
                   ),
                 ),
                 kWidthBox5,
+                IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.sliverAppBar);
+                  },
+                  icon: Icon(
+                    Icons.gamepad_outlined,
+                    color: AppColors.kWhiteColor,
+                  ),
+                ),
+                kWidthBox5,
               ],
             ),
-
             body: GalleryList(
               controller: context.read<GalleryCubit>().homeController,
               state: state,

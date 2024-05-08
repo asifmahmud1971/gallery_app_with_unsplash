@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unsplash_gallery/core/constants/app_strings.dart';
 import 'package:unsplash_gallery/features/screens/gallery/view/gallery_screen.dart';
+import 'package:unsplash_gallery/features/screens/sliver_app_bar/widgets/custom_sliver_app_bar.dart';
 import 'package:unsplash_gallery/features/screens/splash/view/splash_screen.dart';
 
 class Routes {
@@ -10,6 +11,7 @@ class Routes {
   static const String forgotSuccess = "/forgotSuccess";
   static const String dashboard = "/dashboard";
   static const String galleryScreen = "/galleryScreen";
+  static const String sliverAppBar = "/sliverAppBar";
 }
 
 class RouteGenerator {
@@ -24,6 +26,12 @@ class RouteGenerator {
       case Routes.galleryScreen:
         return MaterialPageRoute(
           builder: (_) => const GalleryScreen(),
+          settings: routeSettings,
+        );
+
+      case Routes.sliverAppBar:
+        return MaterialPageRoute(
+          builder: (_) => const CustomSliverAppBar(),
           settings: routeSettings,
         );
 

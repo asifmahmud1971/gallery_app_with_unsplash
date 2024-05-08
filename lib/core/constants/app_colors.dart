@@ -9,8 +9,8 @@ class AppColors {
 
   static const kAshColorOne = Color(0xFF787878);
   static const kAshColorTwo = Color(0xFFDFDFDF);
-  static const kAshColorFive = Color(0xFFF9FAFB);
   static const kAshColorThree = Color(0xFF939393);
+  static const kAshColorFive = Color(0xFFF9FAFB);
 
   static const kGrayColorOne = Color(0xFF5F4C5C);
   static const kGrayColorTwo = Color(0xFF7F707D);
@@ -23,6 +23,7 @@ class AppColors {
 
   static const kBlueColorOne = Color(0xFF107CAD);
   static const kBlueColorTwo = Color(0xFF90BBFF);
+
   static const kRedColor = Color(0xFFF93232);
   static const kGreenColor = Color(0xFF439F6E);
   static const kYellowColor = Color(0xFFFFC000);
