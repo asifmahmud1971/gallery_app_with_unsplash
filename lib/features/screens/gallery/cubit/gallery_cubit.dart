@@ -27,6 +27,7 @@ class GalleryCubit extends Cubit<GalleryState> {
 
   GalleryCubit(this._galleryRepositoryImp, this._appPreferences)
       : super(GalleryState());
+
   RefreshController homeTodayController =
       RefreshController(initialRefresh: false);
   RefreshController homeController = RefreshController(initialRefresh: false);

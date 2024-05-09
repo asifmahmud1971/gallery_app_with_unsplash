@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unsplash_gallery/core/constants/app_strings.dart';
 import 'package:unsplash_gallery/features/screens/gallery/view/gallery_screen.dart';
-import 'package:unsplash_gallery/features/screens/sliver_app_bar/widgets/custom_sliver_app_bar.dart';
+import 'package:unsplash_gallery/features/screens/sliver_app_bar/view/custom_sliver_app_bar.dart';
 import 'package:unsplash_gallery/features/screens/splash/view/splash_screen.dart';
 
 class Routes {
