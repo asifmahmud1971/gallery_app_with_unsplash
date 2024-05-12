@@ -51,7 +51,7 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
       ).then((_) {
         Navigator.pop(context);
       });
-    } on Exception catch (e) {
+    } on Exception {
       Navigator.pop(context);
       showCustomSnackBar(
         context: context,

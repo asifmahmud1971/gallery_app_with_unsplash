@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unsplash_gallery/core/constants/app_strings.dart';
+import 'package:unsplash_gallery/features/screens/auth/login/view/login_view.dart';
+import 'package:unsplash_gallery/features/screens/auth/signup/view/signup_view.dart';
 import 'package:unsplash_gallery/features/screens/gallery/view/gallery_screen.dart';
 import 'package:unsplash_gallery/features/screens/sliver_app_bar/view/custom_sliver_app_bar.dart';
 import 'package:unsplash_gallery/features/screens/splash/view/splash_screen.dart';
@@ -12,6 +14,8 @@ class Routes {
   static const String dashboard = "/dashboard";
   static const String galleryScreen = "/galleryScreen";
   static const String sliverAppBar = "/sliverAppBar";
+  static const String loginView = "/loginView";
+  static const String signupView = "/signupView";
 }
 
 class RouteGenerator {
@@ -32,6 +36,19 @@ class RouteGenerator {
       case Routes.sliverAppBar:
         return MaterialPageRoute(
           builder: (_) => const CustomSliverAppBar(),
+          settings: routeSettings,
+        );
+
+
+      case Routes.loginView:
+        return MaterialPageRoute(
+          builder: (_) => LoginView(),
+          settings: routeSettings,
+        );
+
+      case Routes.signupView:
+        return MaterialPageRoute(
+          builder: (_) => const SignupView(),
           settings: routeSettings,
         );
 

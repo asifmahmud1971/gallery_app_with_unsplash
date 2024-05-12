@@ -422,36 +422,35 @@ class SmartRefresherState extends State<SmartRefresher> {
         dragStartBehavior: dragStartBehavior ?? DragStartBehavior.start,
         reverse: reverse ?? false,
       );
-    } else if (childView is Scrollable) {
-      body = Scrollable(
-        physics: _getScrollPhysics(
-            conf, childView.physics ?? AlwaysScrollableScrollPhysics()),
-        controller: childView.controller,
-        axisDirection: childView.axisDirection,
-        semanticChildCount: childView.semanticChildCount,
-        dragStartBehavior: childView.dragStartBehavior,
-        viewportBuilder: (context, offset) {
-          Viewport viewport =
-              childView.viewportBuilder(context, offset) as Viewport;
-          if (widget.enablePullDown) {
-            viewport.children.insert(
-                0,
-                widget.header ??
-                    (conf?.headerBuilder != null
-                        ? conf?.headerBuilder!()
-                        : null) ??
-                    defaultHeader);
-          }
-          //insert header or footer
-          if (widget.enablePullUp) {
-            viewport.children.add(widget.footer ??
-                (conf?.footerBuilder != null ? conf?.footerBuilder!() : null) ??
-                defaultFooter);
-          }
-          return viewport;
-        },
-      );
-    }
+    } else    body = Scrollable(
+      physics: _getScrollPhysics(
+          conf, childView.physics ?? AlwaysScrollableScrollPhysics()),
+      controller: childView.controller,
+      axisDirection: childView.axisDirection,
+      semanticChildCount: childView.semanticChildCount,
+      dragStartBehavior: childView.dragStartBehavior,
+      viewportBuilder: (context, offset) {
+        Viewport viewport =
+            childView.viewportBuilder(context, offset) as Viewport;
+        if (widget.enablePullDown) {
+          viewport.children.insert(
+              0,
+              widget.header ??
+                  (conf?.headerBuilder != null
+                      ? conf?.headerBuilder!()
+                      : null) ??
+                  defaultHeader);
+        }
+        //insert header or footer
+        if (widget.enablePullUp) {
+          viewport.children.add(widget.footer ??
+              (conf?.footerBuilder != null ? conf?.footerBuilder!() : null) ??
+              defaultFooter);
+        }
+        return viewport;
+      },
+    );
+
     return body;
   }
 
@@ -689,6 +688,7 @@ class RefreshController {
         headerMode!.value = RefreshStatus.refreshing;
       });
     }
+    return null;
   }
 
   /// make the header enter refreshing state,and callback onRefresh

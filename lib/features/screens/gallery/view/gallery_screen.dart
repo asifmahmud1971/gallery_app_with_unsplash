@@ -4,6 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:unsplash_gallery/core/constants/app_print.dart';
 import 'package:unsplash_gallery/core/constants/app_strings.dart';
 import 'package:unsplash_gallery/features/components/custom_appbar.dart';
 import 'package:unsplash_gallery/features/components/custom_dialogs.dart';
@@ -26,11 +27,14 @@ class GalleryScreen extends StatefulWidget {
 class _GalleryScreenState extends State<GalleryScreen> {
   Timer? _debounce;
 
+
+
   @override
   void initState() {
     context.read<GalleryCubit>().homeController =
         RefreshController(initialRefresh: false);
     getData();
+    printLog("Time : ${_debounce.toString()}");
     super.initState();
   }
 
@@ -57,7 +61,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
             drawer: CustomDrawer(),
             appBar: CustomAppBar(
               title: AppStrings.gallery.tr(),
-              onPress: () {
+              onBackPress: () {
                 Navigator.pop(context);
                 getData();
               },

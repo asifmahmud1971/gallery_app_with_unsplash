@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
   final Color textColor;
   final Color btnColor;
   final TextStyle? textStyle;
-  final double textPadding;
+  final double? textPadding;
   final bool outlineButton;
   final bool isIconEnable;
   final String? icon;
@@ -111,7 +111,7 @@ class CustomButton extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppCommonSize.s10),
+              padding: EdgeInsets.symmetric(horizontal: textPadding??AppCommonSize.s10),
               child: Text(
                 title,
                 textAlign: TextAlign.start,

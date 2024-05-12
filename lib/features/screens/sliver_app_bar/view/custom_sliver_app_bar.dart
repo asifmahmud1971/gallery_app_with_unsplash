@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:unsplash_gallery/core/constants/app_colors.dart';
 import 'package:unsplash_gallery/core/constants/app_size.dart';
 import 'package:unsplash_gallery/core/constants/strings.dart';
+import 'package:unsplash_gallery/features/router/routes.dart';
 import 'package:unsplash_gallery/features/screens/sliver_app_bar/cubit/sliver_app_bar_cubit.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
@@ -17,25 +18,45 @@ class CustomSliverAppBar extends StatelessWidget {
             slivers: <Widget>[
               //2
               SliverAppBar(
+                backgroundColor: AppColors.kGradientColorEndOne,
+                /* flexibleSpace: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: <Color>[
+                        AppColors.kGradientColorEndOne,
+                        AppColors.kGradientColorStartOne,
+                      ],
+                    ),
+                  ),
+                ),*/
                 leading: InkWell(
                   onTap: () => Navigator.of(context).pop(),
                   child: Icon(Icons.arrow_back_ios_new,
-                      color: AppColors.kBackGroundColor),
+                      color: AppColors.kWhiteColor),
                 ),
                 automaticallyImplyLeading: true,
-                title: Text("Hello"),
+                title: Text(
+                  "Hello",
+                  style: TextStyle(color: AppColors.kWhiteColor),
+                ),
                 actions: [
                   IconButton(
                     onPressed: () {
-                      context.read<SliverAppBarCubit>().addData("hkkk");
+                      Navigator.of(context).pushNamed(Routes.loginView);
                     },
-                    icon: Icon(Icons.add_box),
+                    icon: Icon(
+                      Icons.login,
+                      color: AppColors.kWhiteColor,
+                    ),
                   )
                 ],
                 elevation: 14,
                 snap: false,
                 stretch: true,
                 pinned: true,
+                floating: true,
                 expandedHeight: 250.0,
                 flexibleSpace: FlexibleSpaceBar(
                   title: Text(''),
@@ -50,7 +71,8 @@ class CustomSliverAppBar extends StatelessWidget {
                   (_, int index) {
                     return ListTile(
                       leading: Container(
-                        padding: EdgeInsets.symmetric(vertical: AppCommonSize.s4),
+                        padding:
+                            EdgeInsets.symmetric(vertical: AppCommonSize.s4),
                         width: 90,
                         child: Image.network(
                           kDemoImage,
@@ -60,17 +82,22 @@ class CustomSliverAppBar extends StatelessWidget {
                       //title: Text('Place ${1}'),
                       title: Row(
                         children: [
-                          Expanded(child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Place ${state.allUser?[index].name}'),
-                              InkWell(
-                                onTap: (){
-                                  state.allUser?[index].copyWith(isActive: true);
-                                },
-                                  child: Text('${state.allUser?[index].isActive}')),
-                            ],
-                          )),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Place ${state.allUser?[index].name}'),
+                                InkWell(
+                                  onTap: () {
+                                    state.allUser?[index]
+                                        .copyWith(isActive: true);
+                                  },
+                                  child:
+                                      Text('${state.allUser?[index].isActive}'),
+                                ),
+                              ],
+                            ),
+                          ),
                           IconButton(
                             onPressed: () => context
                                 .read<SliverAppBarCubit>()
@@ -79,8 +106,9 @@ class CustomSliverAppBar extends StatelessWidget {
                           ),
                           IconButton(
                             onPressed: () {
-                              context.read<SliverAppBarCubit>().isChecked(index);
-
+                              context
+                                  .read<SliverAppBarCubit>()
+                                  .isChecked(index);
                             },
                             icon: state.allUser![index].isActive
                                 ? Icon(

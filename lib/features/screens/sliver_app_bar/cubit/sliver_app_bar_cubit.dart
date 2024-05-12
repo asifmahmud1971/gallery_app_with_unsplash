@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
-import 'package:meta/meta.dart';
 import 'package:unsplash_gallery/features/screens/sliver_app_bar/model/user_model.dart';
 
 part 'sliver_app_bar_state.dart';

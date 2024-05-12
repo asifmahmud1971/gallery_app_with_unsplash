@@ -1,7 +1,7 @@
-import 'dart:developer';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:unsplash_gallery/core/constants/app_print.dart';
 import 'package:unsplash_gallery/features/components/custom_progress_loader.dart';
 import 'package:unsplash_gallery/features/components/my_context.dart';
 
@@ -34,7 +34,7 @@ class CustomTimeFormatter {
     try {
       return DateFormat('dd.MM.yyyy')
           .format((dateTime ?? DateTime.now()).toLocal());
-    } on Exception catch (e) {
+    } on Exception {
       dismissProgressDialog();
       return null;
     }
@@ -43,7 +43,7 @@ class CustomTimeFormatter {
   static String? localDayFormat(DateTime? dateTime) {
     try {
       return DateFormat('yyyy-MM-dd').format((dateTime ?? DateTime.now()));
-    } on Exception catch (e) {
+    } on Exception {
       dismissProgressDialog();
       return null;
     }
@@ -263,7 +263,10 @@ class CustomTimeFormatter {
     final today = DateTime(dateTime.year, dateTime.month, dateTime.day);
     final yesterday = DateTime(dateTime.year, dateTime.month, dateTime.day - 1);
     final tomorrow = DateTime(dateTime.year, dateTime.month, dateTime.day + 1);
-    log("next day : $tomorrow");
+    printLog("next day : $tomorrow");
+    printLog("today : $today");
+    printLog("yesterday : $yesterday");
+
 
     return tomorrow;
   }

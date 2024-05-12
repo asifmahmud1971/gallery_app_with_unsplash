@@ -1,20 +1,16 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:unsplash_gallery/core/constants/app_colors.dart';
-import 'package:unsplash_gallery/core/constants/app_images.dart';
 import 'package:unsplash_gallery/core/constants/app_size.dart';
-import 'package:unsplash_gallery/core/constants/app_strings.dart';
-import 'package:unsplash_gallery/features/components/custom_svg.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
-  final VoidCallback? onPress;
-  List<Widget>? actions;
+  final VoidCallback? onBackPress;
+  final List<Widget>? actions;
   CustomAppBar({
     Key? key,
     this.title,
-    this.onPress,
+    this.onBackPress,
     this.actions
   }) : super(key: key);
 
@@ -28,7 +24,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: false,
-        leadingWidth: 100.w,
+        leadingWidth: 50.w,
+        leading: IconButton(onPressed: onBackPress, icon: Icon(Icons.arrow_back_ios_new,color: AppColors.kWhiteColor)),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unsplash_gallery/core/constants/app_colors.dart';
-import 'package:unsplash_gallery/core/constants/app_images.dart';
 import 'package:unsplash_gallery/core/constants/app_size.dart';
 import 'package:unsplash_gallery/features/components/custom_image.dart';
-import 'package:unsplash_gallery/features/components/custom_time_formatter.dart';
 import 'package:unsplash_gallery/features/screens/gallery/model/gallery_model.dart';
 
 class GalleryCardWidget extends StatelessWidget {
